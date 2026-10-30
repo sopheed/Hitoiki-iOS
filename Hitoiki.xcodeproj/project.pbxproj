@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 71;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0405E7B2B81FF2B28C705328 /* HitoikiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F1D7C74C2A25B46B492BF1E7 /* HitoikiWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1779BD3B90DE21A23871C9CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6F4DA8D93E88A08220E03B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C70B1343949ACEBB838D986;
+			remoteInfo = Hitoiki;
+		};
+		3347A5377B85859586273628 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6F4DA8D93E88A08220E03B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3C70B1343949ACEBB838D986;
+			remoteInfo = Hitoiki;
+		};
+		859DEBB307BF7B17364AEFD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6F4DA8D93E88A08220E03B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64CDF64E1C9DEDD7CE51E283;
+			remoteInfo = HitoikiWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F80EA4B07F3180A9884E154F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				0405E7B2B81FF2B28C705328 /* HitoikiWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		27E4270ADEBA3EB573B9AE2B /* Hitoiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hitoiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B814C5B8138143DD022969B /* HitoikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitoikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		505D3C723638FD98E561D4D5 /* HitoikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitoikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1D7C74C2A25B46B492BF1E7 /* HitoikiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitoikiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0F0EC177072B0DB807B260DA /* HitoikiTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HitoikiTests; sourceTree = "<group>"; };
+		432DCB6BF8ADB9312741C1E6 /* HitoikiUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HitoikiUITests; sourceTree = "<group>"; };
+		70EC9E355AD33E82DE2D5D2F /* Hitoiki */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Hitoiki; sourceTree = "<group>"; };
+		C793D9CADB45C506E61DC262 /* HitoikiWatch */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = HitoikiWatch; sourceTree = "<group>"; };
+		DCF2B3AFA081C174C9D7D256 /* Shared */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Shared; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		52A3A3D0FEA8B88F5ED1DB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94A2F8306E7251E4AF55142E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E3C6824FCE8043F1839738 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F23D8614D7161A9C9F78D21B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		62BCE9422FF2D14F69AB80A1 = {
+			isa = PBXGroup;
+			children = (
+				DCF2B3AFA081C174C9D7D256 /* Shared */,
+				70EC9E355AD33E82DE2D5D2F /* Hitoiki */,
+				C793D9CADB45C506E61DC262 /* HitoikiWatch */,
+				0F0EC177072B0DB807B260DA /* HitoikiTests */,
+				432DCB6BF8ADB9312741C1E6 /* HitoikiUITests */,
+				FE0A091FDBFB3E9C31B7A1BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FE0A091FDBFB3E9C31B7A1BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27E4270ADEBA3EB573B9AE2B /* Hitoiki.app */,
+				F1D7C74C2A25B46B492BF1E7 /* HitoikiWatch.app */,
+				2B814C5B8138143DD022969B /* HitoikiTests.xctest */,
+				505D3C723638FD98E561D4D5 /* HitoikiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18315AA8A594B2FD89109A86 /* HitoikiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AAB4028D6F436CE5836BFFDE /* Build configuration list for PBXNativeTarget "HitoikiTests" */;
+			buildPhases = (
+				F8F17F9E8FCDF6B626090B75 /* Sources */,
+				B3E3C6824FCE8043F1839738 /* Frameworks */,
+				F2EB060BDFA0E01349A82FC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7421FDAC06C09D15B5DD6089 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0F0EC177072B0DB807B260DA /* HitoikiTests */,
+			);
+			name = HitoikiTests;
+			productName = HitoikiTests;
+			productReference = 2B814C5B8138143DD022969B /* HitoikiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3C70B1343949ACEBB838D986 /* Hitoiki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36479CA802718822106981DD /* Build configuration list for PBXNativeTarget "Hitoiki" */;
+			buildPhases = (
+				25A3C98BBD31B8889758FCCB /* Sources */,
+				94A2F8306E7251E4AF55142E /* Frameworks */,
+				85D5F8570DCFBD08BBCA65DD /* Resources */,
+				F80EA4B07F3180A9884E154F /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DC80DE923B4612F995EE80E8 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				70EC9E355AD33E82DE2D5D2F /* Hitoiki */,
+				DCF2B3AFA081C174C9D7D256 /* Shared */,
+			);
+			name = Hitoiki;
+			productName = Hitoiki;
+			productReference = 27E4270ADEBA3EB573B9AE2B /* Hitoiki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64CDF64E1C9DEDD7CE51E283 /* HitoikiWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9BAE520C22C695954DF4C773 /* Build configuration list for PBXNativeTarget "HitoikiWatch" */;
+			buildPhases = (
+				E836D56CE17519883F106EE7 /* Sources */,
+				52A3A3D0FEA8B88F5ED1DB49 /* Frameworks */,
+				B60820D6048863AC00594E82 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				C793D9CADB45C506E61DC262 /* HitoikiWatch */,
+				DCF2B3AFA081C174C9D7D256 /* Shared */,
+			);
+			name = HitoikiWatch;
+			productName = HitoikiWatch;
+			productReference = F1D7C74C2A25B46B492BF1E7 /* HitoikiWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		665B40A1EC3DB50440FE9F3F /* HitoikiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0219676CCC1E17E89FE8E792 /* Build configuration list for PBXNativeTarget "HitoikiUITests" */;
+			buildPhases = (
+				92FB7EB38F97DDE864C4A253 /* Sources */,
+				F23D8614D7161A9C9F78D21B /* Frameworks */,
+				A69211A7D3A0D91E3A0F606E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				79401AC1543B22A1C17AE673 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				432DCB6BF8ADB9312741C1E6 /* HitoikiUITests */,
+			);
+			name = HitoikiUITests;
+			productName = HitoikiUITests;
+			productReference = 505D3C723638FD98E561D4D5 /* HitoikiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6F4DA8D93E88A08220E03B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2710;
+				TargetAttributes = {
+					18315AA8A594B2FD89109A86 = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = 3C70B1343949ACEBB838D986;
+					};
+					3C70B1343949ACEBB838D986 = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					64CDF64E1C9DEDD7CE51E283 = {
+						CreatedOnToolsVersion = 27.1;
+					};
+					665B40A1EC3DB50440FE9F3F = {
+						CreatedOnToolsVersion = 27.1;
+						TestTargetID = 3C70B1343949ACEBB838D986;
+					};
+				};
+			};
+			buildConfigurationList = 314425BAD361EE8153704C56 /* Build configuration list for PBXProject "Hitoiki" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = ja;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ja,
+				en,
+				Base,
+			);
+			mainGroup = 62BCE9422FF2D14F69AB80A1;
+			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3C70B1343949ACEBB838D986 /* Hitoiki */,
+				64CDF64E1C9DEDD7CE51E283 /* HitoikiWatch */,
+				18315AA8A594B2FD89109A86 /* HitoikiTests */,
+				665B40A1EC3DB50440FE9F3F /* HitoikiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85D5F8570DCFBD08BBCA65DD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69211A7D3A0D91E3A0F606E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B60820D6048863AC00594E82 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2EB060BDFA0E01349A82FC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		25A3C98BBD31B8889758FCCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92FB7EB38F97DDE864C4A253 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E836D56CE17519883F106EE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8F17F9E8FCDF6B626090B75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7421FDAC06C09D15B5DD6089 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C70B1343949ACEBB838D986 /* Hitoiki */;
+			targetProxy = 1779BD3B90DE21A23871C9CA /* PBXContainerItemProxy */;
+		};
+		79401AC1543B22A1C17AE673 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3C70B1343949ACEBB838D986 /* Hitoiki */;
+			targetProxy = 3347A5377B85859586273628 /* PBXContainerItemProxy */;
+		};
+		DC80DE923B4612F995EE80E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64CDF64E1C9DEDD7CE51E283 /* HitoikiWatch */;
+			targetProxy = 859DEBB307BF7B17364AEFD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		07AC0FFA730C1FB76C1B5DE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.HitoikiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Hitoiki;
+			};
+			name = Debug;
+		};
+		1D8C0C6B1D22EA8C7669B263 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+			};
+			name = Release;
+		};
+		349241F3107F774DDA0B83FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZFZ88Z3AH6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/HitoikiWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ひといき";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.Hitoiki.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		5CC532096C56FF658E21759A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZFZ88Z3AH6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/Hitoiki-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ひといき";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "今の景色やお水を撮って、ひといきの記録に残すためにカメラを使います。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.Hitoiki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		5CC58B06344FD390F7738AE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = ZFZ88Z3AH6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/HitoikiWatch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ひといき";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.Hitoiki.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		9E4FA826BC51407CD45E5F3F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.HitoikiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Hitoiki;
+			};
+			name = Release;
+		};
+		BFD315016DE16320F7E2120C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = targeted;
+			};
+			name = Debug;
+		};
+		D0CD185FB4CCBA2C7707EF12 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.HitoikiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hitoiki.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hitoiki";
+			};
+			name = Release;
+		};
+		E8B04ED73EDC726F8DB7AF3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.HitoikiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hitoiki.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Hitoiki";
+			};
+			name = Debug;
+		};
+		F306B412A5825A23AD8D6FC9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = ZFZ88Z3AH6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Configuration/Hitoiki-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ひといき";
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "今の景色やお水を撮って、ひといきの記録に残すためにカメラを使います。";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.sopheed.Hitoiki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0219676CCC1E17E89FE8E792 /* Build configuration list for PBXNativeTarget "HitoikiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07AC0FFA730C1FB76C1B5DE1 /* Debug */,
+				9E4FA826BC51407CD45E5F3F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		314425BAD361EE8153704C56 /* Build configuration list for PBXProject "Hitoiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD315016DE16320F7E2120C /* Debug */,
+				1D8C0C6B1D22EA8C7669B263 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36479CA802718822106981DD /* Build configuration list for PBXNativeTarget "Hitoiki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC532096C56FF658E21759A /* Debug */,
+				F306B412A5825A23AD8D6FC9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9BAE520C22C695954DF4C773 /* Build configuration list for PBXNativeTarget "HitoikiWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CC58B06344FD390F7738AE2 /* Debug */,
+				349241F3107F774DDA0B83FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AAB4028D6F436CE5836BFFDE /* Build configuration list for PBXNativeTarget "HitoikiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8B04ED73EDC726F8DB7AF3B /* Debug */,
+				D0CD185FB4CCBA2C7707EF12 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6F4DA8D93E88A08220E03B7 /* Project object */;
+}

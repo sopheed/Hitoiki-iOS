@@ -1,0 +1,14 @@
+{
+  "environment": "iOS 27.0 + watchOS 27.0 paired simulators",
+  "date": "2026-10-30",
+  "transport": "real WatchConnectivity; persisted Watch commands staged as fixtures while app was terminated",
+  "checks": {
+    "phoneSnapshot": true,
+    "watchCommandSavedOnPhone": true,
+    "receiptClearsDurableQueue": true,
+    "duplicateCommandIdempotent": true,
+    "endFromWatch": true,
+    "lateCommandRejected": true,
+    "newArchiveLowerRevisionAccepted": true
+  }
+}
