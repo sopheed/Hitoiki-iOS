@@ -1,0 +1,9 @@
+No sign-in, demo account, purchases, advertising or backend is required. The user interface is Japanese.
+
+1. On the first tab (いま), tap 飲み会をはじめる. Select a planned duration (1–6 hours) and reminder interval (30/60/90 minutes), then confirm. Allow local notifications to review reminders. All other functions remain available if permission is denied.
+2. In the active session, record water or a drink. Open ひといきチェック and choose arithmetic, the drop-finding puzzle, or a photo. A photo can be selected instead of using the camera. Camera access is requested only for taking a photo.
+3. End the session with 今日はここまで. Open きろく to review the timeline, search notes, edit/delete a record or export a CSV. Photos are local and excluded from CSV.
+4. Optional paired Apple Watch: start the session on iPhone first. On Watch, view elapsed time, log water/drinks or end the session. Pending commands sync when connectivity returns. Notifications use the system's iPhone/Watch delivery and mirroring settings.
+
+This is a time-awareness and self-reflection tool for adults, not a medical/sobriety test. Puzzle results do not assess impairment or driving fitness. No claim of faster alcohol metabolism is made. No HealthKit data is used. Records/photos remain local; there is no developer-operated data collection.
+Screenshot records are fictional and were captured from actual SwiftUI screens using Debug-only isolated fixtures. These fixtures are excluded from Release builds.

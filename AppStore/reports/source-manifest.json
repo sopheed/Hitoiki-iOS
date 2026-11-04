@@ -1,0 +1,82 @@
+[
+  {
+    "file": "Hitoiki/CheckInView.swift",
+    "sha256": "dd53771a31a950a0c90dfc5d0383ef09c1acda10cfa639a13d2171db5af75a94"
+  },
+  {
+    "file": "Hitoiki/HistoryView.swift",
+    "sha256": "3aff77562423a028a141eee21bb9af44ba7155b80e0355b362b2917447e964d9"
+  },
+  {
+    "file": "Hitoiki/HitoikiApp.swift",
+    "sha256": "1d85e30360951b02e16bde34180e648cf5bbec647b8236aaa24282e5c27b6d1c"
+  },
+  {
+    "file": "Hitoiki/Notifications.swift",
+    "sha256": "68ea5d076efd66501fa52b15f25a68c0e70e93e57fa03cee369488e0eef951a4"
+  },
+  {
+    "file": "Hitoiki/PhoneBridge.swift",
+    "sha256": "d8e98f1645955b27d202442b3fd68d2feb298b5c10835e021af400a2b5a9cc29"
+  },
+  {
+    "file": "Hitoiki/PrivacyInfo.xcprivacy",
+    "sha256": "97e32f473284df703a5fc921076956ef84a765ca9e7ba2e7ba61350652d12727"
+  },
+  {
+    "file": "Hitoiki/RootView.swift",
+    "sha256": "78c39c6b140d185eb956d29c0b68aee3fccd327aa2e712d2ca317e135a3051c2"
+  },
+  {
+    "file": "Hitoiki/SessionForms.swift",
+    "sha256": "d0a1e52160e61e41a69697ca3a8ab71f6e1031797abfd3be1cf0081a6257b356"
+  },
+  {
+    "file": "Hitoiki/SessionStore.swift",
+    "sha256": "3efe71c54cce8991986fcd2155439848c67033ffe923d8d122542a0c0cb7e183"
+  },
+  {
+    "file": "Hitoiki/SettingsView.swift",
+    "sha256": "68e98220ecccf026c223caec2378ad93a5e0f4a9c7301f9f8e71deee53ddd39e"
+  },
+  {
+    "file": "Hitoiki/Theme.swift",
+    "sha256": "ded8e07ede44b677f09d1085c1408d5dda53de00dfba6a44dbbbc9ae43375b66"
+  },
+  {
+    "file": "Hitoiki.xcodeproj/project.pbxproj",
+    "sha256": "1cb900547565080640bc613d5b32242eec841c88edb42db941950b01504f7b3c"
+  },
+  {
+    "file": "HitoikiTests/HitoikiTests.swift",
+    "sha256": "216870acf529d42a3856920a74c3e48ebdd5f2725d94aa1125e6936091ebb226"
+  },
+  {
+    "file": "HitoikiUITests/HitoikiUITests.swift",
+    "sha256": "4e43d97ddfa679cc0a57622e0ddc0fbc1ee6d9f93758667f9518e10486d2862a"
+  },
+  {
+    "file": "HitoikiWatch/HitoikiWatchApp.swift",
+    "sha256": "cfc86842a6f3df1a9c4c29cac616e0531d4720edc525e1f62d23b04a9768c68b"
+  },
+  {
+    "file": "HitoikiWatch/PrivacyInfo.xcprivacy",
+    "sha256": "97e32f473284df703a5fc921076956ef84a765ca9e7ba2e7ba61350652d12727"
+  },
+  {
+    "file": "HitoikiWatch/WatchStore.swift",
+    "sha256": "8358248ac091bf148463b5839103951cfbf1d56f8ddfa201812c6001ced42c97"
+  },
+  {
+    "file": "Shared/Models.swift",
+    "sha256": "5ec16e3c637e4a6ca7d1b7561015685a76ac7427078061d34479e78dc4ba2b18"
+  },
+  {
+    "file": "Shared/Pota.swift",
+    "sha256": "6ca6f38f81c88a1ad6070d6bfac4fedd2b90a94c290f8f71af677a93a3f72ad2"
+  },
+  {
+    "file": "Shared/StoreScreenshotFixture.swift",
+    "sha256": "5878a2a951949161ce7bfeddc87dae3aecef8d3cbc8983800250fb7ed75aa6fb"
+  }
+]

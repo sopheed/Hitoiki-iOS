@@ -1,0 +1,54 @@
+# ソースコードに基づく確認
+
+2026-11-04。撮影時の端末間同期を止める処理もDEBUGに限定しています。ソースのSHA-256は source-manifest.json。
+
+- `Hitoiki/CheckInView.swift:16`: `@State private var pickedPhoto: PhotosPickerItem?`
+- `Hitoiki/CheckInView.swift:139`: `if UIImagePickerController.isSourceTypeAvailable(.camera) {`
+- `Hitoiki/CheckInView.swift:142`: `PhotosPicker(selection:$pickedPhoto,matching:.images) { Label(loadingPhoto ? "読み込み中…" : "写真を選ぶ",systemImage:"photo") }.disabled(loadingPhoto)`
+- `Hitoiki/CheckInView.swift:176`: `guard let data = clean.jpegData(compressionQuality:0.8), let url = store.photoURL(name!) else { throw DomainError.invalidData }`
+- `Hitoiki/CheckInView.swift:189`: `func makeUIViewController(context: Context) -> UIImagePickerController {`
+- `Hitoiki/CheckInView.swift:190`: `let picker = UIImagePickerController(); picker.sourceType = .camera; picker.delegate = context.coordinator; return picker`
+- `Hitoiki/CheckInView.swift:192`: `func updateUIViewController(_ controller: UIImagePickerController,context: Context) {}`
+- `Hitoiki/CheckInView.swift:194`: `final class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {`
+- `Hitoiki/CheckInView.swift:197`: `func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info:[UIImagePickerController.InfoKey:Any]) { parent.image = info[.originalImag`
+- `Hitoiki/CheckInView.swift:198`: `func imagePickerControllerDidCancel(_ picker: UIImagePickerController) { parent.dismiss() }`
+- `Hitoiki/HitoikiApp.swift:20`: `if directory != nil && ProcessInfo.processInfo.arguments.contains("--store-screenshots") {`
+- `Hitoiki/Notifications.swift:25`: `do { _ = try await center.requestAuthorization(options: [.alert, .sound, .badge]); issue = nil }`
+- `Hitoiki/PhoneBridge.swift:2`: `import WatchConnectivity`
+- `Hitoiki/PhoneBridge.swift:6`: `final class PhoneBridge: NSObject, WCSessionDelegate, ObservableObject {`
+- `Hitoiki/PhoneBridge.swift:13`: `if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }`
+- `Hitoiki/PhoneBridge.swift:15`: `if WCSession.isSupported() { WCSession.default.delegate = self; WCSession.default.activate() }`
+- `Hitoiki/PhoneBridge.swift:19`: `if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }`
+- `Hitoiki/PhoneBridge.swift:21`: `guard WCSession.isSupported(), WCSession.default.activationState == .activated, let store else { return }`
+- `Hitoiki/PhoneBridge.swift:22`: `watchAvailable = WCSession.default.isPaired && WCSession.default.isWatchAppInstalled`
+- `Hitoiki/PhoneBridge.swift:26`: `do { try WCSession.default.updateApplicationContext(["snapshot":data]) }`
+- `Hitoiki/PhoneBridge.swift:39`: `nonisolated func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) { Task { @MainActor in publish() } }`
+- `Hitoiki/PhoneBridge.swift:40`: `nonisolated func sessionDidBecomeInactive(_ session: WCSession) {}`
+- `Hitoiki/PhoneBridge.swift:41`: `nonisolated func sessionDidDeactivate(_ session: WCSession) { session.activate() }`
+- `Hitoiki/PhoneBridge.swift:42`: `nonisolated func sessionWatchStateDidChange(_ session: WCSession) { Task { @MainActor in publish() } }`
+- `Hitoiki/PhoneBridge.swift:43`: `nonisolated func sessionReachabilityDidChange(_ session: WCSession) { Task { @MainActor in publish() } }`
+- `Hitoiki/PhoneBridge.swift:44`: `nonisolated func session(_ session: WCSession, didReceiveMessage message: [String:Any], replyHandler: @escaping ([String:Any])->Void) {`
+- `Hitoiki/PhoneBridge.swift:47`: `nonisolated func session(_ session: WCSession, didReceiveUserInfo userInfo: [String:Any]) {`
+- `Hitoiki/SettingsView.swift:76`: `paragraph("データと写真", "記録と写真は端末内に保存します。Watchとの連携にはAppleのWatchConnectivityを使用します。位置情報の取得や、広告・解析サービスへの送信は行いません。端末のバックアップ設定によってはOSのバックアップに含まれます。アプリを削除すると記録も削除されます。必要な記録はCSVで書き`
+- `Hitoiki.xcodeproj/project.pbxproj:420`: `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;`
+- `Hitoiki.xcodeproj/project.pbxproj:577`: `INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;`
+- `HitoikiUITests/HitoikiUITests.swift:63`: `app.launchArguments = ["--uitest", "--reset", "--store-screenshots", "-AppleLanguages", "(ja)", "-AppleLocale", "ja_JP"]`
+- `HitoikiWatch/WatchStore.swift:2`: `import WatchConnectivity`
+- `HitoikiWatch/WatchStore.swift:6`: `final class WatchStore: NSObject, ObservableObject, WCSessionDelegate {`
+- `HitoikiWatch/WatchStore.swift:19`: `if ProcessInfo.processInfo.arguments.contains("--store-screenshots") {`
+- `HitoikiWatch/WatchStore.swift:28`: `if WCSession.isSupported() { WCSession.default.delegate = self; WCSession.default.activate() }`
+- `HitoikiWatch/WatchStore.swift:40`: `if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }`
+- `HitoikiWatch/WatchStore.swift:56`: `if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }`
+- `HitoikiWatch/WatchStore.swift:58`: `guard WCSession.isSupported(), WCSession.default.activationState == .activated else { return }`
+- `HitoikiWatch/WatchStore.swift:59`: `reachable = WCSession.default.isReachable`
+- `HitoikiWatch/WatchStore.swift:60`: `accept(WCSession.default.receivedApplicationContext)`
+- `HitoikiWatch/WatchStore.swift:62`: `WCSession.default.sendMessage(["request":true],replyHandler:{ reply in Task { @MainActor in self.accept(reply); self.flush() } },errorHandler:{ _ in })`
+- `HitoikiWatch/WatchStore.swift:67`: `guard !inFlight, let command = cache.pending.first, WCSession.default.activationState == .activated,`
+- `HitoikiWatch/WatchStore.swift:69`: `reachable = WCSession.default.isReachable`
+- `HitoikiWatch/WatchStore.swift:72`: `WCSession.default.sendMessage(["command":data],replyHandler:{ reply in`
+- `HitoikiWatch/WatchStore.swift:82`: `let exists = WCSession.default.outstandingUserInfoTransfers.contains { transfer in`
+- `HitoikiWatch/WatchStore.swift:86`: `if !exists { WCSession.default.transferUserInfo(["command":data]) }`
+- `HitoikiWatch/WatchStore.swift:88`: `nonisolated func session(_ session: WCSession,activationDidCompleteWith activationState: WCSessionActivationState,error: Error?) { Task { @MainActor in refresh() } }`
+- `HitoikiWatch/WatchStore.swift:89`: `nonisolated func sessionReachabilityDidChange(_ session: WCSession) { Task { @MainActor in refresh() } }`
+- `HitoikiWatch/WatchStore.swift:90`: `nonisolated func session(_ session: WCSession,didReceiveApplicationContext applicationContext:[String:Any]) { Task { @MainActor in accept(applicationContext); flush() } }`
+- `HitoikiWatch/WatchStore.swift:91`: `nonisolated func session(_ session: WCSession,didReceiveUserInfo userInfo:[String:Any]) { Task { @MainActor in accept(userInfo); flush() } }`

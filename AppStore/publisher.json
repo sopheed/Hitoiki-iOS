@@ -1,0 +1,35 @@
+{
+  "site_base_url": "",
+  "contact_email": "",
+  "copyright_holder": "",
+  "policy_effective_date": "2026-11-04",
+  "review_contact": {
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "phone": ""
+  },
+  "rights_confirmed": {
+    "hitoiki": false,
+    "wordpet": false,
+    "parkingspot": false
+  },
+  "wordpet_personal_team_confirmed": false,
+  "release_confirmations": {
+    "hitoiki": {
+      "public_urls_and_in_app_policy_verified": false,
+      "signed_build_and_real_devices_verified": false,
+      "store_declarations_verified": false
+    },
+    "wordpet": {
+      "public_urls_and_in_app_policy_verified": false,
+      "signed_build_and_real_devices_verified": false,
+      "store_declarations_verified": false
+    },
+    "parkingspot": {
+      "public_urls_and_in_app_policy_verified": false,
+      "signed_build_and_real_devices_verified": false,
+      "store_declarations_verified": false
+    }
+  }
+}

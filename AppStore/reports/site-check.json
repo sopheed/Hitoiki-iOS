@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-04",
+  "scope": "Local HTML in Chrome; no public hosting or HTTP reachability verified",
+  "checks": [
+    {
+      "app": "hitoiki",
+      "file": "index.html",
+      "width": 1440,
+      "title": "アプリについて | ひといき",
+      "no_horizontal_overflow": true,
+      "images_loaded": true,
+      "local_links_valid": true,
+      "script_errors": [],
+      "pending_notice": true,
+      "pass": true
+    },
+    {
+      "app": "hitoiki",
+      "file": "support.html",
+      "width": 1440,
+      "title": "サポート | ひといき",
+      "no_horizontal_overflow": true,
+      "images_loaded": true,
+      "local_links_valid": true,
+      "script_errors": [],
+      "pending_notice": true,
+      "pass": true
+    },
+    {
+      "app": "hitoiki",
+      "file": "privacy.html",
+      "width": 1440,
+      "title": "プライバシーポリシー | ひといき",
+      "no_horizontal_overflow": true,
+      "images_loaded": true,
+      "local_links_valid": true,
+      "script_errors": [],
+      "pending_notice": true,
+      "pass": true
+    },
+    {
+      "app": "hitoiki",
+      "file": "index.html",
+      "width": 390,
+      "title": "アプリについて | ひといき",
+      "no_horizontal_overflow": true,
+      "images_loaded": true,
+      "local_links_valid": true,
+      "script_errors": [],
+      "pending_notice": true,
+      "pass": true
+    },
+    {
+      "app": "hitoiki",
+      "file": "support.html",
+      "width": 390,
+      "title": "サポート | ひといき",
+      "no_horizontal_overflow": true,
+      "images_loaded": true,
+      "local_links_valid": true,
+      "script_errors": [],
+      "pending_notice": true,
+      "pass": true
+    },
+    {
+      "app": "hitoiki",
+      "file": "privacy.html",
+      "width": 390,
+      "title": "プライバシーポリシー | ひといき",
+      "no_horizontal_overflow": true,
+      "images_loaded": true,
+      "local_links_valid": true,
+      "script_errors": [],
+      "pending_notice": true,
+      "pass": true
+    }
+  ]
+}

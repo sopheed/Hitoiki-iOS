@@ -1,0 +1,43 @@
+{
+  "devicesAndConfigurations": [
+    {
+      "device": {
+        "architecture": "arm64",
+        "deviceId": "25539532-280E-437B-8892-02D1B1651B37",
+        "deviceName": "iPhone 18 Pro",
+        "modelName": "iPhone 18 Pro",
+        "osBuildNumber": "24A434",
+        "osVersion": "27.0",
+        "platform": "iOS Simulator"
+      },
+      "expectedFailures": 0,
+      "failedTests": 0,
+      "passedTests": 19,
+      "skippedTests": 0,
+      "testPlanConfiguration": {
+        "configurationId": "1",
+        "configurationName": "Test Scheme Action"
+      }
+    }
+  ],
+  "environmentDescription": "Hitoiki · Built with macOS 26.7.1",
+  "expectedFailures": 0,
+  "failedTests": 0,
+  "finishTime": 1793777063.645,
+  "passedTests": 19,
+  "result": "Passed",
+  "runtimeWarnings": [],
+  "skippedTests": 0,
+  "startTime": 1793777045.853,
+  "statistics": [],
+  "testFailures": [],
+  "title": "Test - Hitoiki",
+  "topInsights": [
+    {
+      "category": "Longest Test Runs",
+      "impact": "99% of duration",
+      "text": "1 longest test run with outlier durations exceeding 7.45s (three standard deviations)"
+    }
+  ],
+  "totalTestCount": 19
+}

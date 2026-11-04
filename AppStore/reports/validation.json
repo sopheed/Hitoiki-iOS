@@ -1,0 +1,415 @@
+{
+  "generated": "2026-11-04",
+  "app": "ひといき",
+  "version": "1.0",
+  "build": "1",
+  "checks": [
+    {
+      "name": "01_app_name",
+      "pass": true,
+      "detail": "4/30 characters"
+    },
+    {
+      "name": "02_subtitle",
+      "pass": true,
+      "detail": "23/30 characters"
+    },
+    {
+      "name": "03_promotional_text",
+      "pass": true,
+      "detail": "78/170 characters"
+    },
+    {
+      "name": "04_keywords",
+      "pass": true,
+      "detail": "82/100 UTF-8 bytes"
+    },
+    {
+      "name": "05_description",
+      "pass": true,
+      "detail": "770/4000 characters"
+    },
+    {
+      "name": "06_whats_new",
+      "pass": true,
+      "detail": "75/4000 characters"
+    },
+    {
+      "name": "10_review_notes",
+      "pass": true,
+      "detail": "1462/4000 characters"
+    },
+    {
+      "name": "screenshot count iphone-large",
+      "pass": true,
+      "detail": "7"
+    },
+    {
+      "name": "screenshots/iphone-large/01-active.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshots/iphone-large/02-check-in.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshots/iphone-large/03-math.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshots/iphone-large/04-history.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshots/iphone-large/05-detail.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshots/iphone-large/06-welcome.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshots/iphone-large/07-plan.png",
+      "pass": true,
+      "detail": "(1320, 2868) RGB"
+    },
+    {
+      "name": "screenshot count iphone-medium",
+      "pass": true,
+      "detail": "7"
+    },
+    {
+      "name": "screenshots/iphone-medium/01-active.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshots/iphone-medium/02-check-in.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshots/iphone-medium/03-math.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshots/iphone-medium/04-history.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshots/iphone-medium/05-detail.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshots/iphone-medium/06-welcome.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshots/iphone-medium/07-plan.png",
+      "pass": true,
+      "detail": "(1206, 2622) RGB"
+    },
+    {
+      "name": "screenshot count watch",
+      "pass": true,
+      "detail": "2"
+    },
+    {
+      "name": "screenshots/watch/01-active.png",
+      "pass": true,
+      "detail": "(416, 496) RGB"
+    },
+    {
+      "name": "screenshots/watch/02-ready.png",
+      "pass": true,
+      "detail": "(416, 496) RGB"
+    },
+    {
+      "name": "icons/AppIcon-dark.png",
+      "pass": true,
+      "detail": "(1024, 1024) RGB"
+    },
+    {
+      "name": "icons/AppIcon.png",
+      "pass": true,
+      "detail": "(1024, 1024) RGB"
+    },
+    {
+      "name": "icons/WatchIcon.png",
+      "pass": true,
+      "detail": "(1024, 1024) RGB"
+    }
+  ],
+  "assets": [
+    {
+      "path": "metadata/README.md",
+      "bytes": 1052,
+      "sha256": "dd428c5fcb23889c20a18281604a23561cf76cd0a2514452a8ecc89869138fb0"
+    },
+    {
+      "path": "metadata/answers.md",
+      "bytes": 9331,
+      "sha256": "ea394237c39aaf263a156443d615a0040cc67c29fe946c6cdd556b05e6808b00"
+    },
+    {
+      "path": "metadata/ja/01_app_name.txt",
+      "bytes": 13,
+      "sha256": "96796dd50e1e2e85cb46d659c9337a403318df227782bef0391ae098a3eb1c9a"
+    },
+    {
+      "path": "metadata/ja/02_subtitle.txt",
+      "bytes": 70,
+      "sha256": "9f2c66763ada5472e736162227f2ba0e270bfde98d3a93e692ba7039b634e64e"
+    },
+    {
+      "path": "metadata/ja/03_promotional_text.txt",
+      "bytes": 213,
+      "sha256": "6e389734aacd1b40ace73e9ec4b370543f9516ba8f64403fab3e0152491313fb"
+    },
+    {
+      "path": "metadata/ja/04_keywords.txt",
+      "bytes": 83,
+      "sha256": "d97414862cd7c470755e82f28f76f6bc7c68de4f25ab809284834ca5c14c00dd"
+    },
+    {
+      "path": "metadata/ja/05_description.txt",
+      "bytes": 2157,
+      "sha256": "384c7c8088196e7413040dcfd759fa9454a0d1d7ef4881b32b69120c0b327487"
+    },
+    {
+      "path": "metadata/ja/06_whats_new.txt",
+      "bytes": 204,
+      "sha256": "930eddce8896863aeb50c03a0b2ddab42f04fafbf7b7bc5669e721d05cafd0c0"
+    },
+    {
+      "path": "metadata/ja/07_support_url.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "metadata/ja/08_marketing_url.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "metadata/ja/09_copyright.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "metadata/ja/10_review_notes.txt",
+      "bytes": 1521,
+      "sha256": "ac1a41e21f90873e543e8942975e2982ae1e0dec9b59088385997e07b2d7fc71"
+    },
+    {
+      "path": "metadata/ja/11_privacy_policy_url.txt",
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    {
+      "path": "icons/AppIcon-dark.png",
+      "bytes": 45622,
+      "sha256": "1a3b2454c1050bd42e16d77a2c7c46af8237ae8aebf0b11299188f3b33a2b932"
+    },
+    {
+      "path": "icons/AppIcon.png",
+      "bytes": 40209,
+      "sha256": "864be3f84e9e7ec83a455f3f442d72ed8f4fb03a2b07bdd72e030311e1913fa1"
+    },
+    {
+      "path": "icons/WatchIcon.png",
+      "bytes": 40209,
+      "sha256": "864be3f84e9e7ec83a455f3f442d72ed8f4fb03a2b07bdd72e030311e1913fa1"
+    },
+    {
+      "path": "screenshots/CONTACT-SHEET.jpg",
+      "bytes": 117897,
+      "sha256": "3b9a6ce4d474d28b6396f4f84d6a1f291229c71ad9fe4ef4e475b70494257a18"
+    },
+    {
+      "path": "screenshots/README.md",
+      "bytes": 1733,
+      "sha256": "f8a1ec34ef9192c0d4141296edf82b6786c75feeab46132f18ec15385cd903fb"
+    },
+    {
+      "path": "screenshots/iphone-large/01-active.png",
+      "bytes": 452898,
+      "sha256": "a7afff22d7c706c6ab5028cfc453953a6f00118375ac03c1ee9bb50dbaf1ae60"
+    },
+    {
+      "path": "screenshots/iphone-large/02-check-in.png",
+      "bytes": 342740,
+      "sha256": "49f51fd2f500d7c68ea2b807df44734cfff8fd36afdb4db4a22ae61b7dfc1ef5"
+    },
+    {
+      "path": "screenshots/iphone-large/03-math.png",
+      "bytes": 328975,
+      "sha256": "7a5a89f130f827ebd2c057b93eacaf9617861d48d22eece5af7f59682ffff8e8"
+    },
+    {
+      "path": "screenshots/iphone-large/04-history.png",
+      "bytes": 373652,
+      "sha256": "675fdace5b3f0f81459b353518d4228b086770819b2b60c1165d17ca6e777e36"
+    },
+    {
+      "path": "screenshots/iphone-large/05-detail.png",
+      "bytes": 388457,
+      "sha256": "dcd8a6b94c93857f9fc3673a84911c43f104bcdfb5288a26cd965c32f47fde5e"
+    },
+    {
+      "path": "screenshots/iphone-large/06-welcome.png",
+      "bytes": 507273,
+      "sha256": "08a1ea46ac1c6d023ee238f40a65708ad06e34c68c8ac93a43a9ab00bdbd796d"
+    },
+    {
+      "path": "screenshots/iphone-large/07-plan.png",
+      "bytes": 446144,
+      "sha256": "4fc582d7c8f30373dc66ca618381ecfb64f98388ee79ed538cd55dd3149ae24c"
+    },
+    {
+      "path": "screenshots/iphone-medium/01-active.png",
+      "bytes": 405650,
+      "sha256": "03eb6c18f2e331f04f4dfbec1d53f63d2622de6319cd8aecfdf5bcd50966229a"
+    },
+    {
+      "path": "screenshots/iphone-medium/02-check-in.png",
+      "bytes": 304473,
+      "sha256": "081f5a13b1e81e087d4bff3a878bbce3f942cd337dc7d17ca7494b20754a639d"
+    },
+    {
+      "path": "screenshots/iphone-medium/03-math.png",
+      "bytes": 292686,
+      "sha256": "7671e5a1b8cc57fcf1942e55279ce1ca91b99fe87aea6ea1308c87ed7263174b"
+    },
+    {
+      "path": "screenshots/iphone-medium/04-history.png",
+      "bytes": 333179,
+      "sha256": "74d70abd0edb14f08553abb3049a7bab7c6c631448dbd535e712c644efe8b974"
+    },
+    {
+      "path": "screenshots/iphone-medium/05-detail.png",
+      "bytes": 347142,
+      "sha256": "5c412e8199f18ca3ad5bd5ce25e79d8987231eef3eb105fd90ec09107b31e779"
+    },
+    {
+      "path": "screenshots/iphone-medium/06-welcome.png",
+      "bytes": 448880,
+      "sha256": "e5428eb78a305a6aa06b3cac9d6cd2f49f39a8a83d1e7e79f289e9e142fe2038"
+    },
+    {
+      "path": "screenshots/iphone-medium/07-plan.png",
+      "bytes": 397449,
+      "sha256": "ae7658da1014b49328ba3ce32a1bd5d0b377f9633f033dcf65c4411c61ac82e4"
+    },
+    {
+      "path": "screenshots/raw/iphone/01-active.png",
+      "bytes": 367147,
+      "sha256": "2ea588a1611251fea609aac85f15db9b73d21129abc6da321f30f33454acf782"
+    },
+    {
+      "path": "screenshots/raw/iphone/02-check-in.png",
+      "bytes": 288060,
+      "sha256": "a8e92ab29c7d28df21b6fcd49eb82fe1425987e4a6a5746e09cacd54975a8336"
+    },
+    {
+      "path": "screenshots/raw/iphone/03-math.png",
+      "bytes": 259679,
+      "sha256": "4313566aa546949a90bc25c9c73eb224b303de5e80b22ad75900595dd629b4cc"
+    },
+    {
+      "path": "screenshots/raw/iphone/04-history.png",
+      "bytes": 285817,
+      "sha256": "acf3de7b7f8aac7564164d1c960bcddd64b1faf1a952de5d4d25a19721a55eef"
+    },
+    {
+      "path": "screenshots/raw/iphone/05-detail.png",
+      "bytes": 292246,
+      "sha256": "4a2851e6cf8f47e259dc4459809f3f71f786e99318d21363bff08aa612370209"
+    },
+    {
+      "path": "screenshots/raw/iphone/06-welcome.png",
+      "bytes": 461931,
+      "sha256": "e6280a67b3dd2814777c21075f18f99a49468998014661422317ac776b72b752"
+    },
+    {
+      "path": "screenshots/raw/iphone/07-plan.png",
+      "bytes": 348468,
+      "sha256": "17013e21288b02e95e42dca4c241484c96bc9288afa6bc183bc16845deb32a51"
+    },
+    {
+      "path": "screenshots/raw/watch/01-active.png",
+      "bytes": 86962,
+      "sha256": "5abde360d9542d87e29de9ee1175b88c1fd632c043be81816b7cb19d5ead36e8"
+    },
+    {
+      "path": "screenshots/raw/watch/02-ready.png",
+      "bytes": 109340,
+      "sha256": "df752e7ffe733a007566096e0242b1166e5a4a7af2da30caf97ed3bbd15803de"
+    },
+    {
+      "path": "screenshots/watch/01-active.png",
+      "bytes": 61545,
+      "sha256": "14f87ea81ed2871242ce5bc6579204e2e07eb6e8b3899e6048374995aaf44f61"
+    },
+    {
+      "path": "screenshots/watch/02-ready.png",
+      "bytes": 70605,
+      "sha256": "436d96ada639b726eb8161c94c564cab353e1e8ffdfbfcd3bea89818149c0e78"
+    },
+    {
+      "path": "site/README.md",
+      "bytes": 672,
+      "sha256": "87e4a1b3ecb8ce27952b8ea7efc607baec232049e40cad07b318ed77cc6eebf0"
+    },
+    {
+      "path": "site/assets/icon.png",
+      "bytes": 40209,
+      "sha256": "864be3f84e9e7ec83a455f3f442d72ed8f4fb03a2b07bdd72e030311e1913fa1"
+    },
+    {
+      "path": "site/assets/screenshot.png",
+      "bytes": 452898,
+      "sha256": "a7afff22d7c706c6ab5028cfc453953a6f00118375ac03c1ee9bb50dbaf1ae60"
+    },
+    {
+      "path": "site/index.html",
+      "bytes": 4851,
+      "sha256": "e78a7acc6ce28f1a00b3b4c053908b49a0d7e5fd3e05c849606321d21f42d43c"
+    },
+    {
+      "path": "site/privacy.html",
+      "bytes": 5913,
+      "sha256": "a9e0e5a14fbd7fa170214a744be6bb235468b708d2ebd9620cb1c3408c330274"
+    },
+    {
+      "path": "site/support.html",
+      "bytes": 5326,
+      "sha256": "00000c4223d17db8ee905d9221155bfbf7b5e1ecbd84babca068702fee00bf50"
+    }
+  ],
+  "pending": [
+    "publisher.json: site_base_url",
+    "publisher.json: contact_email",
+    "publisher.json: copyright_holder",
+    "Review contact: first_name",
+    "Review contact: last_name",
+    "Review contact: email",
+    "Review contact: phone",
+    "Applicant must confirm content/icon/screenshot rights",
+    "Release confirmation: public_urls_and_in_app_policy_verified",
+    "Release confirmation: signed_build_and_real_devices_verified",
+    "Release confirmation: store_declarations_verified"
+  ],
+  "assets_pass": true,
+  "submission_ready": false
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "file": "screenshots/watch/01-active.png",
+    "raw": "screenshots/raw/watch/01-active.png",
+    "device": "Apple Watch Series 12 46mm",
+    "device_id": "71665C09-2352-46A4-A9E9-2721227D6CCA",
+    "capture": "xcrun simctl io screenshot",
+    "date": "2026-11-04",
+    "fictional_data": true,
+    "build": "/tmp/AppStore-HitoikiWatch/Build/Products/Debug-watchsimulator/HitoikiWatch.app"
+  },
+  {
+    "file": "screenshots/watch/02-ready.png",
+    "raw": "screenshots/raw/watch/02-ready.png",
+    "device": "Apple Watch Series 12 46mm",
+    "device_id": "71665C09-2352-46A4-A9E9-2721227D6CCA",
+    "capture": "xcrun simctl io screenshot",
+    "date": "2026-11-04",
+    "fictional_data": true,
+    "build": "/tmp/AppStore-HitoikiWatch/Build/Products/Debug-watchsimulator/HitoikiWatch.app"
+  }
+]

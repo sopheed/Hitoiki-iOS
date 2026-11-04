@@ -1,0 +1,65 @@
+[
+  {
+    "file": "screenshots/raw/iphone/07-plan.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793777009.314,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  },
+  {
+    "file": "screenshots/raw/iphone/06-welcome.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793777007.273,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  },
+  {
+    "file": "screenshots/raw/iphone/05-detail.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793777000.562,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  },
+  {
+    "file": "screenshots/raw/iphone/04-history.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793776997.11,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  },
+  {
+    "file": "screenshots/raw/iphone/03-math.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793776992.573,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  },
+  {
+    "file": "screenshots/raw/iphone/02-check-in.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793776990.597,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  },
+  {
+    "file": "screenshots/raw/iphone/01-active.png",
+    "device": "iPhone 18 Pro",
+    "device_id": "25539532-280E-437B-8892-02D1B1651B37",
+    "timestamp": 1793776988.562,
+    "xcresult": "/tmp/AppStore-Hitoiki-iPhone-final.xcresult",
+    "test": "testAppStoreScreenshots",
+    "fictional_data": true
+  }
+]

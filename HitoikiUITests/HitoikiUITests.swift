@@ -58,6 +58,41 @@ final class HitoikiUITests: XCTestCase {
         tap(app.buttons["ひといきについて・使い方"],in:app)
         XCTAssertTrue(app.staticTexts["ぽたの役目"].waitForExistence(timeout:5))
     }
+    func testAppStoreScreenshots() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--uitest", "--reset", "--store-screenshots", "-AppleLanguages", "(ja)", "-AppleLocale", "ja_JP"]
+        app.launch()
+        XCTAssertTrue(app.staticTexts["elapsedTime"].waitForExistence(timeout: 10))
+        app.tabBars.buttons["せってい"].tap()
+        if app.buttons["通知を許可する"].waitForExistence(timeout: 2) {
+            app.buttons["通知を許可する"].tap()
+            let springboard = XCUIApplication(bundleIdentifier: "com.apple.springboard")
+            if springboard.buttons["許可"].waitForExistence(timeout: 3) { springboard.buttons["許可"].tap() }
+            else if springboard.buttons["Allow"].exists { springboard.buttons["Allow"].tap() }
+        }
+        app.tabBars.buttons["いま"].tap()
+        captureStore(app, "01-active")
+        tap(app.buttons["openCheckIn"], in: app)
+        captureStore(app, "02-check-in")
+        app.buttons["check_ちょこっと計算"].tap()
+        captureStore(app, "03-math")
+        app.buttons["閉じる"].tap()
+        app.tabBars.buttons["きろく"].tap()
+        captureStore(app, "04-history")
+        let row = app.buttons.matching(NSPredicate(format: "identifier BEGINSWITH 'history_' ")).firstMatch
+        XCTAssertTrue(row.waitForExistence(timeout: 5)); row.tap()
+        captureStore(app, "05-detail")
+        app.terminate()
+        let welcome = launch()
+        captureStore(welcome, "06-welcome")
+        welcome.buttons["startSession"].tap()
+        captureStore(welcome, "07-plan")
+    }
+    private func captureStore(_ app: XCUIApplication, _ name: String) {
+        Thread.sleep(forTimeInterval: 1.5)
+        let shot = XCTAttachment(screenshot: app.screenshot()); shot.name = "store-" + name
+        shot.lifetime = .keepAlways; add(shot)
+    }
     func testWelcomeLayout() {
         let app = launch()
         XCTAssertTrue(app.buttons["startSession"].waitForExistence(timeout:5))

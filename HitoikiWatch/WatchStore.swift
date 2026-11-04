@@ -15,6 +15,13 @@ final class WatchStore: NSObject, ObservableObject, WCSessionDelegate {
     func pendingCount(_ action: WatchAction) -> Int { cache.pending.filter { $0.sessionID == session?.id && $0.action == action }.count }
     override init() {
         super.init()
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--store-screenshots") {
+            cache = WatchCache(snapshot: WatchSnapshot(revision: 1, session: ProcessInfo.processInfo.arguments.contains("--store-ready") ? nil : StoreScreenshotFixture.session(), receipts: [], updatedAt: Date()))
+            reachable = true
+            return
+        }
+        #endif
         do {
             if FileManager.default.fileExists(atPath:url.path) { cache = try JSONDecoder().decode(WatchCache.self,from:Data(contentsOf:url)) }
         } catch { loadFailed = true; message = "記録を読み込めません。アプリを開き直してください。保存済みのファイルは残しています。" }
@@ -29,6 +36,9 @@ final class WatchStore: NSObject, ObservableObject, WCSessionDelegate {
         } catch { message = "保存できませんでした。もう一度お試しください。"; return false }
     }
     func record(_ action: WatchAction) {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }
+        #endif
         guard let session, !ending else { return }
         var next = cache
         next.pending.append(WatchCommand(sessionID:session.id,date:Date(),action:action))
@@ -42,6 +52,9 @@ final class WatchStore: NSObject, ObservableObject, WCSessionDelegate {
     }
 
     func refresh() {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }
+        #endif
         guard WCSession.isSupported(), WCSession.default.activationState == .activated else { return }
         reachable = WCSession.default.isReachable
         accept(WCSession.default.receivedApplicationContext)

@@ -9,9 +9,15 @@ final class PhoneBridge: NSObject, WCSessionDelegate, ObservableObject {
     init(store: SessionStore) {
         self.store = store
         super.init()
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }
+        #endif
         if WCSession.isSupported() { WCSession.default.delegate = self; WCSession.default.activate() }
     }
     func publish() {
+        #if DEBUG
+        if ProcessInfo.processInfo.arguments.contains("--store-screenshots") { return }
+        #endif
         guard WCSession.isSupported(), WCSession.default.activationState == .activated, let store else { return }
         watchAvailable = WCSession.default.isPaired && WCSession.default.isWatchAppInstalled
         guard watchAvailable else { return }

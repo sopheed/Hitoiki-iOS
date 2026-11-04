@@ -16,6 +16,11 @@ struct HitoikiApp: App {
         }
         #endif
         let store = SessionStore(directory:directory)
+        #if DEBUG
+        if directory != nil && ProcessInfo.processInfo.arguments.contains("--store-screenshots") {
+            store.transact { $0 = StoreScreenshotFixture.archive() }
+        }
+        #endif
         let reminders = ReminderCenter()
         let bridge = PhoneBridge(store:store)
         reminders.store = store
