@@ -1,0 +1,30 @@
+{
+  "checked_on": "2026-11-05",
+  "app": "Hitoiki",
+  "app_id": "6830956191",
+  "bundle_id": "eijirou.Hitoiki",
+  "sku": "eijirou.Hitoiki.iOS",
+  "fields": [
+    {
+      "id": "name",
+      "value": "ひといき - 飲み会の見守りタイマー"
+    },
+    {
+      "id": "subtitle",
+      "value": "ぽたと飲み会のペースを見直す、やさしい時間管理"
+    },
+    {
+      "id": "bundleId",
+      "value": "eijirou.Hitoiki"
+    },
+    {
+      "id": "primaryCategory",
+      "value": "LIFESTYLE"
+    },
+    {
+      "id": "secondaryCategory",
+      "value": "HEALTH_AND_FITNESS"
+    }
+  ],
+  "verified_after_reload": true
+}

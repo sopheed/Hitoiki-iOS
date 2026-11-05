@@ -1,10 +1,10 @@
 {
-  "date": "2026-11-04",
+  "date": "2026-11-05",
   "configuration": "Release",
   "signed": false,
   "device_install_tested": false,
-  "build_log": "/tmp/AppStore-Hitoiki-Release-final.log",
-  "bundle_id": "jp.sopheed.Hitoiki",
+  "build_log": "/tmp/Hitoiki-personal-Release.log",
+  "bundle_id": "eijirou.Hitoiki",
   "version": "1.0",
   "build": "1",
   "minimum_os": "17.0",
@@ -36,7 +36,8 @@
   "advertising_identifiers_absent": true,
   "watch_apps": [
     {
-      "bundle_id": "jp.sopheed.Hitoiki.watchkitapp",
+      "bundle_id": "eijirou.Hitoiki.watchkitapp",
+      "companion_bundle_id": "eijirou.Hitoiki",
       "version": "1.0",
       "build": "1",
       "minimum_os": "10.0",
@@ -77,5 +78,6 @@
     "\t/usr/lib/swift/libswift_Concurrency.dylib (compatibility version 0.0.0, current version 0.0.0)",
     "\t/usr/lib/swift/libswiftos.dylib (compatibility version 1.0.0, current version 1090.0.0)",
     "\t/usr/lib/swift/libswiftsimd.dylib (compatibility version 1.0.0, current version 25.0.0, weak)"
-  ]
+  ],
+  "team_id": "TQQM6G5CS8"
 }

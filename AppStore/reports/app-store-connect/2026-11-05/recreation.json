@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-05",
+  "previous_app_id": "6830940134",
+  "bundle_id": "eijirou.Hitoiki",
+  "sku": "eijirou.Hitoiki.iOS",
+  "user_authorized_removal_and_recreation": true,
+  "archive_bundle_id": "eijirou.Hitoiki.registrationarchive",
+  "removed": true,
+  "testflight_had_no_builds": true,
+  "app_id": "6830956191",
+  "recreated": true,
+  "bundle_id_preserved": true
+}

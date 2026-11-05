@@ -6,10 +6,12 @@
 
 1. `Hitoiki.xcodeproj` をXcodeで開きます。
 2. Scheme `Hitoiki`、iPhoneシミュレータまたは実機を選んで実行します。
-3. 実機では `Hitoiki` と `HitoikiWatch` の **Signing & Capabilities → Team** を自分のチームに設定してください。Bundle IDも必要に応じて両方変更します。Watchの `Configuration/HitoikiWatch-Info.plist` にある `WKCompanionAppBundleIdentifier` をiPhoneのBundle IDと揃えてください。
+3. 個人チーム `TQQM6G5CS8`、iPhone用ID `eijirou.Hitoiki`、Watch用ID `eijirou.Hitoiki.watchkitapp` を設定済みです。実機では同じチームのアカウントで署名してください。Watchの `WKCompanionAppBundleIdentifier` もiPhone用IDに合わせています。
 4. Watchはペアリングした端末にインストールして、Scheme `HitoikiWatch` で起動できます。飲み会の開始はiPhoneからです。
 
-外部パッケージ、サーバー、APIキーは不要です。iOS 17 / watchOS 10以降に対応し、この環境ではXcode 27.1で検証しています。署名チームは指定していません。
+外部パッケージ、サーバー、APIキーは不要です。iOS 17 / watchOS 10以降に対応し、この環境ではXcode 27.1で検証しています。
+
+2026-11-05、個人アカウントに「ひといき - 飲み会の見守りタイマー」を新規登録しました（App ID `6830956191`）。短いストア名「ひといき」と従来のBundle IDが使用できなかったため、上記の名前とIDで登録しています。[ストア登録の作業記録](AppStore/reports/app-store-connect/2026-11-05/RESULT.md)に保存内容と提出前の残作業をまとめています。
 
 ## できること
 

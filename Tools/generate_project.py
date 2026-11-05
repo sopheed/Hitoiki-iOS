@@ -36,8 +36,8 @@ for name in target_names:
         proxy=add(name+'Proxy',isa='PBXContainerItemProxy',containerPortal=uid('Project'),proxyType=1,remoteGlobalIDString=uid(dependency+'Target'),remoteInfo=dependency)
         deps.append(add(name+'Dependency',isa='PBXTargetDependency',target=uid(dependency+'Target'),targetProxy=proxy))
     settings={
-        'PRODUCT_NAME':'$(TARGET_NAME)','PRODUCT_BUNDLE_IDENTIFIER':'jp.sopheed.'+name.replace('HitoikiWatch','Hitoiki.watchkitapp'),
-        'CODE_SIGN_STYLE':'Automatic','GENERATE_INFOPLIST_FILE':'YES','SWIFT_VERSION':'5.0',
+        'PRODUCT_NAME':'$(TARGET_NAME)','PRODUCT_BUNDLE_IDENTIFIER':'eijirou.'+name.replace('HitoikiWatch','Hitoiki.watchkitapp'),
+        'CODE_SIGN_STYLE':'Automatic','DEVELOPMENT_TEAM':'TQQM6G5CS8','GENERATE_INFOPLIST_FILE':'YES','SWIFT_VERSION':'5.0',
         'IPHONEOS_DEPLOYMENT_TARGET':'17.0','TARGETED_DEVICE_FAMILY':'1',
         'SDKROOT':'iphoneos','SUPPORTED_PLATFORMS':'iphoneos iphonesimulator',
         'CURRENT_PROJECT_VERSION':'1','MARKETING_VERSION':'1.0',
@@ -77,7 +77,7 @@ for name in ['Hitoiki','HitoikiWatch']:
     (root/f'Hitoiki.xcodeproj/xcshareddata/xcschemes/{name}.xcscheme').write_text(scheme)
 info={'NSCameraUsageDescription':'今の景色やお水を撮って、ひといきの記録に残すためにカメラを使います。','ITSAppUsesNonExemptEncryption':False,'LSApplicationCategoryType':'public.app-category.healthcare-fitness'}
 (root/'Configuration/Hitoiki-Info.plist').write_bytes(plistlib.dumps(info))
-watch={'WKApplication':True,'WKCompanionAppBundleIdentifier':'jp.sopheed.Hitoiki','WKRunsIndependentlyOfCompanionApp':False,'ITSAppUsesNonExemptEncryption':False}
+watch={'WKApplication':True,'WKCompanionAppBundleIdentifier':'eijirou.Hitoiki','WKRunsIndependentlyOfCompanionApp':False,'ITSAppUsesNonExemptEncryption':False}
 (root/'Configuration/HitoikiWatch-Info.plist').write_bytes(plistlib.dumps(watch))
 privacy={'NSPrivacyTracking':False,'NSPrivacyCollectedDataTypes':[],'NSPrivacyAccessedAPITypes':[]}
 for n in ['Hitoiki','HitoikiWatch']:

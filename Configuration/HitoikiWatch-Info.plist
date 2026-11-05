@@ -7,7 +7,7 @@
 	<key>WKApplication</key>
 	<true/>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>jp.sopheed.Hitoiki</string>
+	<string>eijirou.Hitoiki</string>
 	<key>WKRunsIndependentlyOfCompanionApp</key>
 	<false/>
 </dict>

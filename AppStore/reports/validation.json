@@ -1,13 +1,28 @@
 {
-  "generated": "2026-11-04",
-  "app": "ひといき",
+  "generated": "2026-11-05",
+  "app": "ひといき - 飲み会の見守りタイマー",
   "version": "1.0",
   "build": "1",
   "checks": [
     {
+      "name": "personal_bundle_id",
+      "pass": true,
+      "detail": "eijirou.Hitoiki"
+    },
+    {
+      "name": "sku_uses_personal_namespace",
+      "pass": true,
+      "detail": "eijirou.Hitoiki.iOS"
+    },
+    {
+      "name": "watch_bundle_id",
+      "pass": true,
+      "detail": "eijirou.Hitoiki.watchkitapp"
+    },
+    {
       "name": "01_app_name",
       "pass": true,
-      "detail": "4/30 characters"
+      "detail": "18/30 characters"
     },
     {
       "name": "02_subtitle",
@@ -148,6 +163,16 @@
       "name": "icons/WatchIcon.png",
       "pass": true,
       "detail": "(1024, 1024) RGB"
+    },
+    {
+      "name": "site_base_url",
+      "pass": true,
+      "detail": "HTTPS, actual public URL required; not fetched by builder"
+    },
+    {
+      "name": "contact_email",
+      "pass": true,
+      "detail": "Email syntax"
     }
   ],
   "assets": [
@@ -158,13 +183,13 @@
     },
     {
       "path": "metadata/answers.md",
-      "bytes": 9331,
-      "sha256": "ea394237c39aaf263a156443d615a0040cc67c29fe946c6cdd556b05e6808b00"
+      "bytes": 9586,
+      "sha256": "16093d11963bac0f99c07d04077f8bca016bc0943b4aba4b6a3df1fb17258eeb"
     },
     {
       "path": "metadata/ja/01_app_name.txt",
-      "bytes": 13,
-      "sha256": "96796dd50e1e2e85cb46d659c9337a403318df227782bef0391ae098a3eb1c9a"
+      "bytes": 49,
+      "sha256": "5591b13526f0313b1261f7c106e2e191ac441ae0c1ca19e0a623107fd22b528b"
     },
     {
       "path": "metadata/ja/02_subtitle.txt",
@@ -193,18 +218,18 @@
     },
     {
       "path": "metadata/ja/07_support_url.txt",
-      "bytes": 1,
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      "bytes": 34,
+      "sha256": "c26ed58797dc2fbf0cdccae8f48093c781a3c858669242b6f1b74cf477f92808"
     },
     {
       "path": "metadata/ja/08_marketing_url.txt",
-      "bytes": 1,
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      "bytes": 26,
+      "sha256": "12cc79878afab3fdb459a175b3826b53476be9af3c9ecb1433e1c1da7d816c4e"
     },
     {
       "path": "metadata/ja/09_copyright.txt",
-      "bytes": 1,
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      "bytes": 17,
+      "sha256": "ff95d0ebd2392e8d148df8feacff92f7a934b62fd15f97ef48db91a3418231da"
     },
     {
       "path": "metadata/ja/10_review_notes.txt",
@@ -213,8 +238,8 @@
     },
     {
       "path": "metadata/ja/11_privacy_policy_url.txt",
-      "bytes": 1,
-      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+      "bytes": 34,
+      "sha256": "77955c810fdc51bf6ad0cdf84c7f1d10bdeb83bb8cb58e6ff887df091d685c79"
     },
     {
       "path": "icons/AppIcon-dark.png",
@@ -233,8 +258,8 @@
     },
     {
       "path": "screenshots/CONTACT-SHEET.jpg",
-      "bytes": 117897,
-      "sha256": "3b9a6ce4d474d28b6396f4f84d6a1f291229c71ad9fe4ef4e475b70494257a18"
+      "bytes": 117903,
+      "sha256": "2051f5d2cbeef021ceefbea8b8436cae443691106421e8da5ac9c79709ddbeb1"
     },
     {
       "path": "screenshots/README.md",
@@ -368,39 +393,31 @@
     },
     {
       "path": "site/README.md",
-      "bytes": 672,
-      "sha256": "87e4a1b3ecb8ce27952b8ea7efc607baec232049e40cad07b318ed77cc6eebf0"
+      "bytes": 249,
+      "sha256": "345fe2f3a2ed41d4cf2654f5a8360736e70665e2374e145b6300fb9bc932a6e5"
     },
     {
-      "path": "site/assets/icon.png",
+      "path": "site/assets/hitoiki-icon.png",
       "bytes": 40209,
       "sha256": "864be3f84e9e7ec83a455f3f442d72ed8f4fb03a2b07bdd72e030311e1913fa1"
     },
     {
-      "path": "site/assets/screenshot.png",
-      "bytes": 452898,
-      "sha256": "a7afff22d7c706c6ab5028cfc453953a6f00118375ac03c1ee9bb50dbaf1ae60"
+      "path": "site/assets/parkingspot-icon.png",
+      "bytes": 198420,
+      "sha256": "c6abd64044899ea088c831634647a7bf67d56914c77b6de24b5b7129fc045fd2"
+    },
+    {
+      "path": "site/assets/wordpet-icon.png",
+      "bytes": 171370,
+      "sha256": "15e57e97e456544f7c427ce7f6e6fc6779659e2eb40d7ccba2b9eeb7424569ac"
     },
     {
       "path": "site/index.html",
-      "bytes": 4851,
-      "sha256": "e78a7acc6ce28f1a00b3b4c053908b49a0d7e5fd3e05c849606321d21f42d43c"
-    },
-    {
-      "path": "site/privacy.html",
-      "bytes": 5913,
-      "sha256": "a9e0e5a14fbd7fa170214a744be6bb235468b708d2ebd9620cb1c3408c330274"
-    },
-    {
-      "path": "site/support.html",
-      "bytes": 5326,
-      "sha256": "00000c4223d17db8ee905d9221155bfbf7b5e1ecbd84babca068702fee00bf50"
+      "bytes": 11857,
+      "sha256": "7d913bf368b630892aec4c1b82b59f4977a1b094d25ac0f803fea7bb48a8689e"
     }
   ],
   "pending": [
-    "publisher.json: site_base_url",
-    "publisher.json: contact_email",
-    "publisher.json: copyright_holder",
     "Review contact: first_name",
     "Review contact: last_name",
     "Review contact: email",

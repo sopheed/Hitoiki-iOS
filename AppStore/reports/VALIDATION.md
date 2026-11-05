@@ -1,22 +1,19 @@
 # 検証結果
 
-生成日: 2026-11-04
+生成日: 2026-11-05
 
 画像・文字数の検証: PASS
 
-- 01_app_name: 4/30 characters
+- personal_bundle_id: eijirou.Hitoiki
+- sku_uses_personal_namespace: eijirou.Hitoiki.iOS
+- watch_bundle_id: eijirou.Hitoiki.watchkitapp
+- 01_app_name: 18/30 characters
 - 02_subtitle: 23/30 characters
 - 03_promotional_text: 78/170 characters
 - 04_keywords: 82/100 UTF-8 bytes
-- 05_description: 770/4000 characters
-- 06_whats_new: 75/4000 characters
-- 10_review_notes: 1462/4000 characters
 
 提出前に必要な設定:
 
-- publisher.json: site_base_url
-- publisher.json: contact_email
-- publisher.json: copyright_holder
 - Review contact: first_name
 - Review contact: last_name
 - Review contact: email

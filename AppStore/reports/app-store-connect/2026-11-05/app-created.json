@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-05",
+  "name": "ひといき - 飲み会の見守りタイマー",
+  "platform": "IOS",
+  "locale": "ja",
+  "bundle_id": "eijirou.Hitoiki",
+  "watch_bundle_id": "eijirou.Hitoiki.watchkitapp",
+  "team_id": "TQQM6G5CS8",
+  "sku": "eijirou.Hitoiki.iOS",
+  "user_access": "full",
+  "supersedes_app_id": "6830940134",
+  "app_id": "6830956191",
+  "url": "https://appstoreconnect.apple.com/apps/6830956191/distribution/ios/version/inflight",
+  "created": true,
+  "creation_notice": "App created; current access is all users, matching requested full access."
+}

@@ -1,6 +1,6 @@
 # ソースコードに基づく確認
 
-2026-11-04。撮影時の端末間同期を止める処理もDEBUGに限定しています。ソースのSHA-256は source-manifest.json。
+2026-11-04。撮影時の端末間同期を止める処理もDEBUGに限定しています。ソースのSHA-256は source-manifest.json。2026-11-05の個人用ID／Team変更後にプロジェクトのハッシュを更新し、Configurationのplistと生成スクリプトも追加しました。機能ソースは変更していません。
 
 - `Hitoiki/CheckInView.swift:16`: `@State private var pickedPhoto: PhotosPickerItem?`
 - `Hitoiki/CheckInView.swift:139`: `if UIImagePickerController.isSourceTypeAvailable(.camera) {`

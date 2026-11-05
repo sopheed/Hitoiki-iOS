@@ -1,49 +1,50 @@
-# ひといき — App Store公開準備キット
+# ひといき - 飲み会の見守りタイマー — App Store公開準備キット
 
-2026-11-04作成。現在のアプリに合わせた日本語の登録文、実画面のスクリーンショット、アイコン、公開用Webページ、申告案を揃えています。App Store Connectへの登録・アップロード・審査提出・サイト公開は行っていません。
+更新日: 2026-11-05。日本語の登録文・画像・アイコン・公開用Webページ・申告案をまとめています。
+
+| 項目 | 現在の設定 |
+|---|---|
+| App ID | `6830956191` |
+| Bundle ID | `eijirou.Hitoiki` |
+| SKU | `eijirou.Hitoiki.iOS` |
+| Team | `TQQM6G5CS8` |
+| ローカルのバージョン / ビルド | 1.0 / 1 |
+
+[App Store Connectの編集画面](https://appstoreconnect.apple.com/apps/6830956191/distribution/ios/version/inflight)。日本語の説明文・カテゴリ・審査メモと画像16枚を保存済みです。詳しい確認結果は [RESULT.md](reports/app-store-connect/2026-11-05/RESULT.md)。この更新では年齢・収集ラベル・権利・価格などの未確定の申告は変更していません。
+
+Connectには審査用ビルドがまだありません。署名済みビルドのアップロードと選択は利用者が別Macで行います。
+
+## 公開サポートページ
+
+3アプリの紹介・お問い合わせ・プライバシーを**1ページ**にまとめました。
+
+- 紹介: https://sopheed.com/apps/
+- サポート: https://sopheed.com/apps/#support
+- プライバシーポリシー: https://sopheed.com/apps/#privacy
+- 問い合わせ: service@sopheed.com
+- 運営者・著作権: Shunji Kyan（既存ストア表記と同じ）
+
+3アプリのサポート・マーケティング・プライバシーURLはApp Store Connectに保存・再読込確認済みです。利用者による公開後、HTMLとアイコン3枚をHTTPS・HTTP 200で取得し、準備ファイルとの一致とPC・iPhone幅の表示を確認しました。ドメインとメールは利用者が指定した公開先で、Bundle ID・SKUは個人用の命名を維持しています。
+
+このキットの `site/index.html` と `site/assets/` でも同じ1ページを公開できます。共通のアップロード用ZIPと配置手順は `AppStoreRelease/WEBSITE-UPLOAD.md` です。
+
+## ファイルと再生成
 
 | 内容 | 場所 |
 |---|---|
-| コピペする登録文（11項目） | `metadata/ja/` |
-| カテゴリ・年齢・プライバシー・輸出・審査情報 | `metadata/answers.md` |
-| iPhoneのアップロード用画像 | `screenshots/iphone-large/` と `screenshots/iphone-medium/` |
-| 実画面の原本と撮影出典 | `screenshots/raw/` と `reports/capture-*.json` |
-| 1024pxのアイコン（既存デザイン） | `icons/` |
-| サポート・プライバシー・紹介ページ | `site/` |
-| 再生成・検証 | `tools/build_kit.py` |
-| 検証結果・SHA-256 | `reports/validation.json` |
+| 日本語の登録文・URL | `metadata/ja/` |
+| 申告案と根拠 | `metadata/answers.md` |
+| アップロード用画像 | `screenshots/`（`raw/` と一覧画像は提出用ではありません） |
+| 1024pxアイコン | `icons/` |
+| 共通Webページ・画像 | `site/` |
+| 文字数・画像・SHA-256の確認 | `reports/validation.json` |
+| ストア保存確認 | `reports/app-store-connect/2026-11-05/` |
 | 受け渡し用ZIP | `dist/` |
 
-Watch対応アプリは `screenshots/watch/`、iPad対応アプリは `screenshots/ipad-13/` も使います。`CONTACT-SHEET.jpg` は一覧確認用で、提出画像ではありません。
+単独で再生成する場合は `publisher.json` を編集し、`python3 tools/build_kit.py --skip-images` を実行します。共通ページの公開内容は `site-content.json` と `site-assets/` にも同梱しています。3アプリをまとめて再生成する場合は、iOSワークスペースのルートで `python3 AppStoreRelease/tools/prepare_all.py --skip-images` を実行します。
 
-## 公開前に埋めるもの
+## 審査提出前
 
-共通の `/Users/skyan/Documents/Source/Sopheed/iOS/AppStoreRelease/publisher.json`に、実際の公開URL、問い合わせメール、権利者名、非公開の審査担当者連絡先を設定します。3アプリをまとめて再生成する場合:
+公開ページの到達性は確認済みです。アプリ内からのプライバシー案内、実機と署名、素材権利、残る申告と配信条件を確認してから審査へ進みます。`assets=PASS` は画像・文字数・ファイルの検証結果です。`--strict` は未設定・未確認が残る場合も失敗にします。
 
-```sh
-cd /Users/skyan/Documents/Source/Sopheed/iOS
-python3 -m pip install 'Pillow>=10,<13'
-python3 AppStoreRelease/tools/prepare_all.py
-```
-
-このキットだけで作業する場合は `publisher.json` を編集し、`python3 tools/build_kit.py` を実行します。公開先と連絡先が未定なのでURL欄は空です。実在しないドメインを貼らないでください。設定後、`site/` を公開して到達性・連絡先・アプリ内からプライバシー方針を読めることを確認します。
-
-`--strict` は未設定や未確認があれば終了コード2にします。本人確認、権利、署名実機確認、Connectでの宣言を実際に終えてから `publisher.json` の確認フラグを更新してください。`assets=PASS` は審査提出可能・承認済みを意味しません。
-
-## 登録の順番
-
-1. 個人のApple Developerアカウント、Bundle ID、アプリ名の使用可否を確認する。SKU案は `SOPHEED-HITOIKI-IOS`、主要言語は日本語。
-2. ConnectでiOSアプリを作成し、`metadata/ja/` の1〜5、7〜9、11を設定する。初回バージョンには「このバージョンの最新情報」は不要。6は更新時のたたき台として同梱。
-3. 推奨カテゴリと年齢質問票、App Privacy、コンテンツ権利、輸出関連を `metadata/answers.md` に沿って回答する。本人確認が必要な宣言は本人が確定する。
-4. 端末別の画像を番号順でアップロードする。通常はキャプション付きだけを使い、原本と重複して10枚を超えない。
-5. 実機確認と署名Archiveを行い、ビルドをConnectに送信する。審査担当者連絡先と10の審査メモを設定する。ログイン情報は不要。
-6. 価格・配信国を本人が選ぶ。初回は「日本・無料・手動リリース」を推奨するが、Connectには設定していない。EU配信を選ぶ場合はDSA申告も確認する。
-7. 公開Webページ・アプリ内のプライバシー導線・実機動作を再確認し、本人が審査提出する。
-
-## このアプリで確認すること
-
-- Apple Watchは **飲み会をiPhoneで開始してから** 利用。Watchだけで開始できる、という説明にしない。
-- 通知は通常iPhoneまたはWatchの一方。常に両方に届くと書かない。
-- パズルの成績を酔いの判定に使わない。水で分解が早まる、飲酒後も運転できるなどと書かない。
-
-App Preview動画、カスタムプロダクトページ、検索広告、App内課金用画像は必須ではなく、このキットには含めていません。日本語UIと一致する日本語ローカライズを用意しています。
+アプリ本体のソースは今回変更していません。既存の署名なしRelease確認を、署名・実機・アップロードの成功とは区別しています。アイコンは署名済みビルドの送信後にストアへ反映されます。認証情報・秘密鍵はキットに含めません。

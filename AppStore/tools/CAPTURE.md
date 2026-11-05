@@ -3,7 +3,7 @@
 Xcodeを使用します。下記の `DEVICE_UDID` は `xcrun simctl list devices available` で確認した対象デバイスのIDへ置き換えます。個人データのないSimulatorを使い、Watchのペア接続を使った撮影と同時に実行しないでください。
 
 ```sh
-cd /Users/skyan/Documents/Source/Sopheed/iOS/Hitoiki-iOS
+# アプリのプロジェクトルートで実行
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcodebuild test -project Hitoiki.xcodeproj -scheme Hitoiki -destination 'platform=iOS Simulator,id=DEVICE_UDID' -derivedDataPath /tmp/Hitoiki-StoreCapture -resultBundlePath /tmp/Hitoiki-StoreCapture.xcresult -only-testing:HitoikiUITests/HitoikiUITests/testAppStoreScreenshots CODE_SIGNING_ALLOWED=NO
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun xcresulttool export attachments --path /tmp/Hitoiki-StoreCapture.xcresult --output-path /tmp/Hitoiki-StoreCapture-attachments
 python3 AppStore/tools/import_captures.py /tmp/Hitoiki-StoreCapture-attachments --xcresult /tmp/Hitoiki-StoreCapture.xcresult
@@ -19,7 +19,7 @@ fixtureは `--store-screenshots` と既存のUIテスト用引数を使います
 46mm Watch Simulatorで撮影した416×496を同じセットで使っています。Debugの `HitoikiWatch` スキームを `platform=watchOS Simulator,id=WATCH_UDID` にビルドしてインストールしたあと:
 
 ```sh
-DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl launch WATCH_UDID jp.sopheed.Hitoiki.watchkitapp --store-screenshots -AppleLanguages '(ja)' -AppleLocale ja_JP
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl launch WATCH_UDID eijirou.Hitoiki.watchkitapp --store-screenshots -AppleLanguages '(ja)' -AppleLocale ja_JP
 # 画面が落ち着いてから、未使用の一時ファイルに撮影
 DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer xcrun simctl io WATCH_UDID screenshot /tmp/Hitoiki-watch-active-new.png
 ```

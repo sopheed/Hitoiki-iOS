@@ -1,0 +1,264 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "locale": "ja",
+  "verified_after_reload": true,
+  "sets": {
+    "iPhone": {
+      "images": [
+        {
+          "filename": "01-active.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/20DV6Wn-7ZXIaaP5FaIMEA/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "02-check-in.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/hPz8Q2PMHYQrIhOiT4rb1A/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "03-math.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/1d8HQY1SgjkQWIc_6rMYIQ/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "04-history.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/er8XdYTEtxm0wGCchekvZQ/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "05-detail.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/RwKO583XsZH2jkxCYsv3fg/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "06-welcome.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/mtlOs_zWPJXXMm5PDZTJqQ/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "07-plan.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/6u-JVTQD2-YykO3PLNZQNg/331x720bb.png",
+          "width": 331,
+          "height": 720
+        },
+        {
+          "filename": "01-active.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/aC2hJtVqLJn0pEwfbfNswA/331x720bb.png",
+          "width": 331,
+          "height": 719
+        },
+        {
+          "filename": "02-check-in.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/MkV499N-gM4b5zI-IqsVGw/331x720bb.png",
+          "width": 331,
+          "height": 719
+        },
+        {
+          "filename": "03-math.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/OsR1XA76U9PHD5dtGaQsWQ/331x720bb.png",
+          "width": 331,
+          "height": 719
+        },
+        {
+          "filename": "04-history.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/o-8w7eLs5RkUeTxCElrxhw/331x720bb.png",
+          "width": 331,
+          "height": 719
+        },
+        {
+          "filename": "05-detail.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/5mnuEv0MhL1BPmIIo7-Bzw/331x720bb.png",
+          "width": 331,
+          "height": 719
+        },
+        {
+          "filename": "06-welcome.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/9N7iTjK1-1tc9rY9lFBlTw/331x720bb.png",
+          "width": 331,
+          "height": 719
+        },
+        {
+          "filename": "07-plan.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/bzQ5K6eG55nE5_FIAcD93g/331x720bb.png",
+          "width": 331,
+          "height": 719
+        }
+      ],
+      "alerts": []
+    },
+    "Apple Watch": {
+      "images": [
+        {
+          "filename": "01-active.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/EkhJNaDYEWKquwRykqiuIg/603x720bb.png",
+          "width": 416,
+          "height": 496
+        },
+        {
+          "filename": "02-ready.pngのスクリーンショット",
+          "src": "https://is1-ssl.mzstatic.com/image/thumb/84t8zBdCFU8y-Cmcao5T8Q/603x720bb.png",
+          "width": 416,
+          "height": 496
+        }
+      ],
+      "alerts": []
+    }
+  },
+  "content_verification": {
+    "method": "Download public CDN originals in displayed order and compare every RGB pixel with prepared local assets",
+    "passed": true,
+    "images": [
+      {
+        "local": "screenshots/iphone-medium/01-active.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/20DV6Wn-7ZXIaaP5FaIMEA/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-medium/02-check-in.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/hPz8Q2PMHYQrIhOiT4rb1A/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-medium/03-math.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/1d8HQY1SgjkQWIc_6rMYIQ/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-medium/04-history.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/er8XdYTEtxm0wGCchekvZQ/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-medium/05-detail.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/RwKO583XsZH2jkxCYsv3fg/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-medium/06-welcome.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/mtlOs_zWPJXXMm5PDZTJqQ/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-medium/07-plan.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/6u-JVTQD2-YykO3PLNZQNg/0x0ss.png",
+        "uploaded_dimensions": [
+          1206,
+          2622
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/01-active.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/aC2hJtVqLJn0pEwfbfNswA/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/02-check-in.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/MkV499N-gM4b5zI-IqsVGw/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/03-math.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/OsR1XA76U9PHD5dtGaQsWQ/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/04-history.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/o-8w7eLs5RkUeTxCElrxhw/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/05-detail.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/5mnuEv0MhL1BPmIIo7-Bzw/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/06-welcome.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/9N7iTjK1-1tc9rY9lFBlTw/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/iphone-large/07-plan.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/bzQ5K6eG55nE5_FIAcD93g/0x0ss.png",
+        "uploaded_dimensions": [
+          1320,
+          2868
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/watch/01-active.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/EkhJNaDYEWKquwRykqiuIg/0x0ss.png",
+        "uploaded_dimensions": [
+          416,
+          496
+        ],
+        "pixel_identical": true
+      },
+      {
+        "local": "screenshots/watch/02-ready.png",
+        "uploaded_url": "https://is1-ssl.mzstatic.com/image/thumb/84t8zBdCFU8y-Cmcao5T8Q/0x0ss.png",
+        "uploaded_dimensions": [
+          416,
+          496
+        ],
+        "pixel_identical": true
+      }
+    ]
+  }
+}

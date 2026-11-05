@@ -1,8 +1,8 @@
 {
-  "site_base_url": "",
-  "contact_email": "",
-  "copyright_holder": "",
-  "policy_effective_date": "2026-11-04",
+  "site_base_url": "https://sopheed.com/apps",
+  "contact_email": "service@sopheed.com",
+  "copyright_holder": "Shunji Kyan",
+  "policy_effective_date": "2026-11-05",
   "review_contact": {
     "first_name": "",
     "last_name": "",
@@ -14,7 +14,7 @@
     "wordpet": false,
     "parkingspot": false
   },
-  "wordpet_personal_team_confirmed": false,
+  "wordpet_personal_team_confirmed": true,
   "release_confirmations": {
     "hitoiki": {
       "public_urls_and_in_app_policy_verified": false,
@@ -31,5 +31,6 @@
       "signed_build_and_real_devices_verified": false,
       "store_declarations_verified": false
     }
-  }
+  },
+  "site_layout": "single_page"
 }

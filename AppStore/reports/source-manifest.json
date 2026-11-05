@@ -1,5 +1,17 @@
 [
   {
+    "file": "Configuration/Hitoiki-Info.plist",
+    "sha256": "97704a8960b4facceef54397a08fb5d0a456247c3627359215aa2a27df22656c"
+  },
+  {
+    "file": "Configuration/HitoikiWatch-Info.plist",
+    "sha256": "c110d10e009f58cf70628978ebe8209acbbec5852096cba33bae7338d62041e4"
+  },
+  {
+    "file": "Hitoiki.xcodeproj/project.pbxproj",
+    "sha256": "e16ee0b7916c9da91901017698855a1e695246b7de0c015ac2a12bef6c4e4380"
+  },
+  {
     "file": "Hitoiki/CheckInView.swift",
     "sha256": "dd53771a31a950a0c90dfc5d0383ef09c1acda10cfa639a13d2171db5af75a94"
   },
@@ -44,10 +56,6 @@
     "sha256": "ded8e07ede44b677f09d1085c1408d5dda53de00dfba6a44dbbbc9ae43375b66"
   },
   {
-    "file": "Hitoiki.xcodeproj/project.pbxproj",
-    "sha256": "1cb900547565080640bc613d5b32242eec841c88edb42db941950b01504f7b3c"
-  },
-  {
     "file": "HitoikiTests/HitoikiTests.swift",
     "sha256": "216870acf529d42a3856920a74c3e48ebdd5f2725d94aa1125e6936091ebb226"
   },
@@ -78,5 +86,9 @@
   {
     "file": "Shared/StoreScreenshotFixture.swift",
     "sha256": "5878a2a951949161ce7bfeddc87dae3aecef8d3cbc8983800250fb7ed75aa6fb"
+  },
+  {
+    "file": "Tools/generate_project.py",
+    "sha256": "9e91e9c56f18d95a5a570637c55537201f034c36841aed321fcbfa0a5bd25f28"
   }
 ]

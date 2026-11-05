@@ -1,0 +1,15 @@
+{
+  "app_id": "6830956191",
+  "version": "1.0",
+  "fields": {
+    "promotionalText": "楽しい時間に、ひといき。飲み会の経過時間とおひらき予定を確かめながら、お水・お酒・今の気持ちを記録。Apple Watchからも、手元でそっと振り返れます。",
+    "description": "楽しい時間を、明日も気持ちよく。\nひといきは、飲み会で時間を忘れがちなあなたに、自分のペースを思い出すきっかけを届けるアプリです。しずくの仲間「ぽた」が、そっと寄り添います。\n\n■ はじめに、帰る時間を決めよう\n飲み会の開始時に、おひらきの目安と通知間隔を設定。経過時間、次の声かけ、終了予定をひとつの画面で確認できます。通知は30分・60分・90分から選べます。\n\n■ お水も、お酒も、さっと記録\nお水はワンタップ。お酒は種類を選んで記録できます。間違えたお水の記録は、直後の取り消しにも対応しています。\n\n■ ときどき、今に戻る小さなチェック\n簡単な計算、しずく探し、写真からひとつ選んで、少しだけ立ち止まる時間を。チェックのあとには、今の気持ちも残せます。\n\n■ Apple Watchでも、ひといき\n飲み会はiPhoneから開始。Watchでは経過時間と終了予定の確認、お水・お酒の記録、おひらきができます。通信できないときの操作は、接続が戻ったときに同期します。通知は端末の状態や設定に応じてiPhoneまたはWatchに届きます。\n\n■ 次の時間につながる記録帳\n過去の記録を日付やメモで検索。記録の詳細、写真、メモを見返したり、CSVで書き出したりできます。不要な記録は削除できます。\n\nアカウント登録、広告、アプリ内課金はありません。記録と写真は端末内に保存し、Watchとの連携にはAppleの仕組みを使います。\n\nひといきは成人の飲酒習慣を振り返るためのアプリです。医療機器ではなく、酔いの程度・判断力・運転できるかを判定しません。チェックの正解やお水の記録は、酔いがさめたことを意味しません。お水でアルコールの分解が早まることもありません。飲酒後は運転しないでください。通知の到着や気づきを保証するものではありません。",
+    "keywords": "飲みすぎ,飲酒,水分,タイマー,お酒,飲み会,習慣,リマインダー",
+    "notes": "No sign-in, demo account, purchases, advertising or backend is required. The user interface is Japanese.\n\n1. On the first tab (いま), tap 飲み会をはじめる. Select a planned duration (1–6 hours) and reminder interval (30/60/90 minutes), then confirm. Allow local notifications to review reminders. All other functions remain available if permission is denied.\n2. In the active session, record water or a drink. Open ひといきチェック and choose arithmetic, the drop-finding puzzle, or a photo. A photo can be selected instead of using the camera. Camera access is requested only for taking a photo.\n3. End the session with 今日はここまで. Open きろく to review the timeline, search notes, edit/delete a record or export a CSV. Photos are local and excluded from CSV.\n4. Optional paired Apple Watch: start the session on iPhone first. On Watch, view elapsed time, log water/drinks or end the session. Pending commands sync when connectivity returns. Notifications use the system's iPhone/Watch delivery and mirroring settings.\n\nThis is a time-awareness and self-reflection tool for adults, not a medical/sobriety test. Puzzle results do not assess impairment or driving fitness. No claim of faster alcohol metabolism is made. No HealthKit data is used. Records/photos remain local; there is no developer-operated data collection.\nScreenshot records are fictional and were captured from actual SwiftUI screens using Debug-only isolated fixtures. These fixtures are excluded from Release builds.",
+    "copyright": "2026 Shunji Kyan",
+    "versionString": "1.0",
+    "supportUrl": "https://sopheed.com/apps/#support",
+    "marketingUrl": "https://sopheed.com/apps/"
+  },
+  "verified_after_reload": true
+}

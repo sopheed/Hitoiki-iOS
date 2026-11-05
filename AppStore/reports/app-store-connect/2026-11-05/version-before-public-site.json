@@ -1,0 +1,49 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "version": "1.0",
+  "locale": "ja",
+  "fields": {
+    "promotionalText": {
+      "matches": true,
+      "length": 78
+    },
+    "description": {
+      "matches": true,
+      "length": 770
+    },
+    "keywords": {
+      "matches": true,
+      "length": 32
+    },
+    "notes": {
+      "matches": true,
+      "length": 1462
+    },
+    "copyright": {
+      "matches": true,
+      "length": 16
+    },
+    "versionString": {
+      "matches": true,
+      "length": 3
+    },
+    "supportUrl": {
+      "matches": true,
+      "length": 45
+    },
+    "marketingUrl": {
+      "matches": true,
+      "length": 43
+    }
+  },
+  "verified_after_reload": true,
+  "state": "PREPARE_FOR_SUBMISSION",
+  "release_type": "MANUAL",
+  "sign_in_required": false,
+  "support_url": "https://sopheed.com/apps/hitoiki/support.html",
+  "marketing_url": "https://sopheed.com/apps/hitoiki/index.html",
+  "save_disabled": true,
+  "review_submitted": false,
+  "hosting_status": "PENDING_USER_UPLOAD"
+}

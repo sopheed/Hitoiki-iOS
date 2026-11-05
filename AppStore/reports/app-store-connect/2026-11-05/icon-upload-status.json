@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "bundle_id": "eijirou.Hitoiki",
+  "status": "USER_BUILD_UPLOAD_REQUIRED",
+  "icon_registration_complete": false,
+  "build_uploaded": false,
+  "signed": false,
+  "source_icons_validated": true,
+  "source_manifest_matches": true,
+  "note": "Upload the signed build from the other development Mac. Existing unsigned Release verification does not prove signing or device behavior."
+}
