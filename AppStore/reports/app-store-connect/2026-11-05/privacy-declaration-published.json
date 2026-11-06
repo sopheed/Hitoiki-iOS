@@ -1,0 +1,17 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "app": "Hitoiki",
+  "collects_data": false,
+  "label": "データの収集なし",
+  "published": true,
+  "verified_after_reload": true,
+  "privacy_policy_url": "https://sopheed.com/apps/#privacy",
+  "review_submitted": false,
+  "evidence": [
+    "Hitoiki/SessionStore.swift",
+    "Hitoiki/CheckInView.swift",
+    "Hitoiki/PhoneBridge.swift",
+    "Hitoiki/PrivacyInfo.xcprivacy"
+  ]
+}

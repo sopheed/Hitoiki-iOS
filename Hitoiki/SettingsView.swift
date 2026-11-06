@@ -49,9 +49,10 @@ struct SettingsView: View {
             } header: { Text("手元から、かんたんに") }
             Section {
                 NavigationLink("ひといきについて・使い方") { AboutView() }
-                Text("アカウント不要 / 広告なし / アプリから外部送信なし")
+                Text("アカウント不要 / 記録と写真は端末に保存")
                     .font(.caption).foregroundStyle(Palette.secondary)
             } footer: { Text("ひといき 1.0 • MADE WITH A LITTLE CARE") }
+            AdvertisingPrivacySection()
         }.navigationTitle("せってい").scrollContentBackground(.hidden).background(Palette.canvas)
             .task { await reminders.refreshPermission() }
     }
@@ -73,7 +74,8 @@ struct AboutView: View {
                 paragraph("ぽたの役目", "楽しい飲み会で、時間と帰る予定を思い出すお手伝いをします。お水を飲んだり、少し休んだり。飲むことを責めずに、自分のペースを大切にするためのアプリです。")
                 paragraph("チェックについて", "計算・しずく探し・写真は、意識を今に戻すきっかけです。正解しても、酔いがさめたことや判断力が正常なことを意味しません。お水もアルコールの分解を早めません。飲酒後は運転しないでください。")
                 paragraph("つらいときは", "無理に飲み続けず、休んで近くの人に声をかけてください。呼びかけに反応しない、呼吸がおかしいときは119へ。飲酒のコントロールに困ることが続く場合は、医療機関や地域の相談窓口へ相談してください。")
-                paragraph("データと写真", "記録と写真は端末内に保存します。Watchとの連携にはAppleのWatchConnectivityを使用します。位置情報の取得や、広告・解析サービスへの送信は行いません。端末のバックアップ設定によってはOSのバックアップに含まれます。アプリを削除すると記録も削除されます。必要な記録はCSVで書き出せます（写真は含みません）。")
+                paragraph("データと写真", "記録と写真は端末内に保存します。Watchとの連携にはAppleのWatchConnectivityを使用します。飲酒・チェックの記録や写真を広告サービスへ渡すことはありません。端末のバックアップ設定によってはOSのバックアップに含まれます。アプリを削除すると記録も削除されます。必要な記録はCSVで書き出せます（写真は含みません）。")
+                paragraph("広告について", "通常の画面の一部にGoogle AdMobのバナーを表示します。チェック、撮影、入力中には表示しません。パーソナライズ広告と広告のための位置情報収集を無効にしています。広告の配信・不正防止・計測には、IPアドレス、端末・広告の識別情報、操作・診断情報などがGoogleに送信される場合があります。設定の「広告とプライバシー」から方針を確認できます。")
                 paragraph("通知について", "飲み会中は最大60回分と終了予定の通知を予約します。アプリを開くと予約を補充します。終了すると残りの通知を取り消します。通知は端末の設定や電源状態などに左右されます。")
                 Text("今日のあなたにも、明日のあなたにも。")
                     .font(.subheadline.bold()).foregroundStyle(Palette.forest).frame(maxWidth:.infinity).padding(.vertical,12)

@@ -1,0 +1,16 @@
+{
+  "tests": {
+    "exit_code": 0,
+    "log": "/private/tmp/Hitoiki-ads-final-tests.log"
+  },
+  "release": {
+    "exit_code": 0,
+    "log": "/private/tmp/Hitoiki-ads-rdp-release.log",
+    "includes_restricted_data_processing": true
+  },
+  "release_before_rdp": {
+    "exit_code": 0,
+    "log": "/private/tmp/Hitoiki-ads-final-release.log"
+  },
+  "scope": "Two advertising tests passed per app: configuration and placement/visibility. Final Release device build includes RDP setting added after these layout tests. Signing and actual ad delivery are not verified."
+}

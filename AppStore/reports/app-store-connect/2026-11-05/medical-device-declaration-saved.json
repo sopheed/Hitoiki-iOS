@@ -1,0 +1,13 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "regulated_medical_device": false,
+  "saved": true,
+  "verified_after_reload": true,
+  "basis": "Wellness reminders and private drinking records; no diagnosis, treatment, intoxication assessment, medical sensors, or regulated-device functionality.",
+  "evidence": [
+    "Hitoiki/SettingsView.swift",
+    "Hitoiki/SessionStore.swift",
+    "Hitoiki/CheckInView.swift"
+  ]
+}

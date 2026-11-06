@@ -1,4 +1,4 @@
-No sign-in, demo account, purchases, advertising or backend is required. The user interface is Japanese.
+No sign-in, demo account, purchases or developer-operated backend is required. Google AdMob banners appear on ordinary home/history screens; check-in, camera and session-entry sheets have no banners. Personalized ads, publisher first-party IDs and SDK coarse-location collection are disabled. UMP handles required regional consent, with a privacy-options entry in settings when required. The user interface is Japanese.
 
 1. On the first tab (いま), tap 飲み会をはじめる. Select a planned duration (1–6 hours) and reminder interval (30/60/90 minutes), then confirm. Allow local notifications to review reminders. All other functions remain available if permission is denied.
 2. In the active session, record water or a drink. Open ひといきチェック and choose arithmetic, the drop-finding puzzle, or a photo. A photo can be selected instead of using the camera. Camera access is requested only for taking a photo.

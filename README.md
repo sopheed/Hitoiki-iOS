@@ -9,7 +9,7 @@
 3. 個人チーム `TQQM6G5CS8`、iPhone用ID `eijirou.Hitoiki`、Watch用ID `eijirou.Hitoiki.watchkitapp` を設定済みです。実機では同じチームのアカウントで署名してください。Watchの `WKCompanionAppBundleIdentifier` もiPhone用IDに合わせています。
 4. Watchはペアリングした端末にインストールして、Scheme `HitoikiWatch` で起動できます。飲み会の開始はiPhoneからです。
 
-外部パッケージ、サーバー、APIキーは不要です。iOS 17 / watchOS 10以降に対応し、この環境ではXcode 27.1で検証しています。
+サーバーは不要です。iPhoneのバナーにはGoogle Mobile Ads 13.12.0とUMP 3.1.0をSwift Package Managerで取得します。広告IDは `Configuration/Advertising.xcconfig` にあり、DebugはGoogleのテスト広告を使います。iOS 17 / watchOS 10以降に対応し、この環境ではXcode 27.1で検証しています。
 
 2026-11-05、個人アカウントに「ひといき - 飲み会の見守りタイマー」を新規登録しました（App ID `6830956191`）。短いストア名「ひといき」と従来のBundle IDが使用できなかったため、上記の名前とIDで登録しています。[ストア登録の作業記録](AppStore/reports/app-store-connect/2026-11-05/RESULT.md)に保存内容と提出前の残作業をまとめています。
 
@@ -40,7 +40,7 @@
 
 ## 保存とプライバシー
 
-iPhoneのApplication Support内 `Hitoiki/archive.json` に日時・設定・記録を保存し、写真は `Hitoiki/Photos/` のJPEGです。アカウント、広告、位置情報、ネットワークAPI、解析SDKはありません。Watchとの同期にはWatchConnectivityを使います。
+iPhoneのApplication Support内 `Hitoiki/archive.json` に日時・設定・記録を保存し、写真は `Hitoiki/Photos/` のJPEGです。アカウントや記録を集めるサーバーはありません。通常のホーム・履歴画面にAdMobバナーを表示し、広告の配信・計測には通信を使います。記録や写真を広告に渡しません。チェック・撮影・入力・設定・Watchには広告を表示しません。Watchとの同期にはWatchConnectivityを使います。公開前の設定は `AppStore/ADVERTISING-RELEASE.md` を参照してください。
 
 JSONは変更を検証して原子的に保存してから画面に反映します。書き込みに失敗した変更は反映せず、エラーを表示します。読み込み不能のファイルを空データで上書きしません。写真は長辺1280px以下に再描画してJPEG化し、元写真のメタデータは引き継ぎません。フォトライブラリはPhotosPicker経由で選択した画像だけを読み込みます。
 

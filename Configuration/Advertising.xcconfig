@@ -1,0 +1,5 @@
+// AdMob IDs belong to this app only. Debug always uses Google demo ads.
+ADMOB_APP_ID = ca-app-pub-5120539001782748~7843047484
+ADMOB_BANNER_ID = ca-app-pub-5120539001782748/7874837074
+ADMOB_APP_ID[config=Debug] = ca-app-pub-3940256099942544~1458002511
+ADMOB_BANNER_ID[config=Debug] = ca-app-pub-3940256099942544/2934735716

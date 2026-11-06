@@ -1,8 +1,8 @@
 {
-  "generated": "2026-11-05",
+  "generated": "2026-11-06",
   "app": "ひといき - 飲み会の見守りタイマー",
-  "version": "1.0",
-  "build": "1",
+  "version": "1.0.1",
+  "build": "2",
   "checks": [
     {
       "name": "personal_bundle_id",
@@ -42,17 +42,17 @@
     {
       "name": "05_description",
       "pass": true,
-      "detail": "770/4000 characters"
+      "detail": "787/4000 characters"
     },
     {
       "name": "06_whats_new",
       "pass": true,
-      "detail": "75/4000 characters"
+      "detail": "52/4000 characters"
     },
     {
       "name": "10_review_notes",
       "pass": true,
-      "detail": "1462/4000 characters"
+      "detail": "1777/4000 characters"
     },
     {
       "name": "screenshot count iphone-large",
@@ -208,13 +208,13 @@
     },
     {
       "path": "metadata/ja/05_description.txt",
-      "bytes": 2157,
-      "sha256": "384c7c8088196e7413040dcfd759fa9454a0d1d7ef4881b32b69120c0b327487"
+      "bytes": 2208,
+      "sha256": "c99ddb2c4368904bc8027119053d88e2ddb48aeb3435198f01080d7ebd9ebf8c"
     },
     {
       "path": "metadata/ja/06_whats_new.txt",
-      "bytes": 204,
-      "sha256": "930eddce8896863aeb50c03a0b2ddab42f04fafbf7b7bc5669e721d05cafd0c0"
+      "bytes": 155,
+      "sha256": "f1f37a25cfe1059bd743d3188c8c11c38182db9f5cc66260547761d09f9176fd"
     },
     {
       "path": "metadata/ja/07_support_url.txt",
@@ -228,13 +228,13 @@
     },
     {
       "path": "metadata/ja/09_copyright.txt",
-      "bytes": 17,
-      "sha256": "ff95d0ebd2392e8d148df8feacff92f7a934b62fd15f97ef48db91a3418231da"
+      "bytes": 13,
+      "sha256": "804772daaa8001bb394b2103d7eb6c658e387dda8d012c632044342698ab8932"
     },
     {
       "path": "metadata/ja/10_review_notes.txt",
-      "bytes": 1521,
-      "sha256": "ac1a41e21f90873e543e8942975e2982ae1e0dec9b59088385997e07b2d7fc71"
+      "bytes": 1836,
+      "sha256": "c151b7b8122dffdfb5095d1efed48c95f1540b6af96e90f8377697fe1c2ad913"
     },
     {
       "path": "metadata/ja/11_privacy_policy_url.txt",
@@ -413,8 +413,8 @@
     },
     {
       "path": "site/index.html",
-      "bytes": 11857,
-      "sha256": "7d913bf368b630892aec4c1b82b59f4977a1b094d25ac0f803fea7bb48a8689e"
+      "bytes": 13365,
+      "sha256": "009faabf97f0645df3a174c318e3adea02af3cc18e775af711a6818644d4902a"
     }
   ],
   "pending": [

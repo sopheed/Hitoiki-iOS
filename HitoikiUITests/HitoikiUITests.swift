@@ -1,6 +1,20 @@
 import XCTest
 
 final class HitoikiUITests: XCTestCase {
+    func testBannerDoesNotCoverNavigationOrSessionEntry() {
+        let app = XCUIApplication()
+        app.launchArguments = ["--uitest", "--reset", "--ad-layout-preview"]
+        app.launch()
+        let banner = app.staticTexts["テスト広告・レイアウト確認用"]
+        XCTAssertTrue(banner.waitForExistence(timeout:10))
+        XCTAssertLessThanOrEqual(banner.frame.maxY,app.tabBars.firstMatch.frame.minY)
+        tap(app.buttons["startSession"],in:app)
+        XCTAssertTrue(app.navigationBars["飲み会をはじめる"].waitForExistence(timeout:5))
+        XCTAssertFalse(banner.exists)
+        app.buttons["閉じる"].tap()
+        app.tabBars.buttons["せってい"].tap()
+        XCTAssertFalse(banner.exists)
+    }
     private func launch(reset: Bool = true) -> XCUIApplication {
         let app = XCUIApplication()
         app.launchArguments = ["--uitest"] + (reset ? ["--reset"] : [])

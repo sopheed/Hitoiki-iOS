@@ -30,8 +30,18 @@ struct RootView: View {
                 }.padding(28)
             } else {
                 TabView(selection:$tab) {
-                    NavigationStack { HomeView(sheet:$sheet,onWater:recordWater) }.tabItem { Label("いま",systemImage:"drop.fill") }.tag(0)
-                    NavigationStack { HistoryView() }.tabItem { Label("きろく",systemImage:"book.closed.fill") }.tag(1)
+                    NavigationStack {
+                        HomeView(sheet:$sheet,onWater:recordWater)
+                            .safeAreaInset(edge:.bottom,spacing:0) {
+                                AdBannerPlacement(isVisible:sheet == nil && toast == nil)
+                            }
+                    }.tabItem { Label("いま",systemImage:"drop.fill") }.tag(0)
+                    NavigationStack {
+                        HistoryView()
+                            .safeAreaInset(edge:.bottom,spacing:0) {
+                                AdBannerPlacement(isVisible:sheet == nil && toast == nil)
+                            }
+                    }.tabItem { Label("きろく",systemImage:"book.closed.fill") }.tag(1)
                     NavigationStack { SettingsView() }.tabItem { Label("せってい",systemImage:"slider.horizontal.3") }.tag(2)
                 }
             }

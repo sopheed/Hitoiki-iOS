@@ -1,0 +1,146 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "app": "Hitoiki",
+  "version": "1.0.0",
+  "rating": "18+",
+  "override": "NONE",
+  "kids_category": false,
+  "saved": true,
+  "verified_after_reload": true,
+  "answers": [
+    {
+      "step": 1,
+      "answers": [
+        {
+          "name": "parentalControls",
+          "value": "false"
+        },
+        {
+          "name": "ageAssurance",
+          "value": "false"
+        },
+        {
+          "name": "unrestrictedWebAccess",
+          "value": "false"
+        },
+        {
+          "name": "userGeneratedContent",
+          "value": "false"
+        },
+        {
+          "name": "socialMedia",
+          "value": "false"
+        },
+        {
+          "name": "socialMediaAgeRestricted",
+          "value": "false"
+        },
+        {
+          "name": "messagingAndChat",
+          "value": "false"
+        },
+        {
+          "name": "advertising",
+          "value": "false"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "answers": [
+        {
+          "name": "profanityOrCrudeHumor",
+          "value": "NONE"
+        },
+        {
+          "name": "horrorOrFearThemes",
+          "value": "NONE"
+        },
+        {
+          "name": "alcoholTobaccoOrDrugUseOrReferences",
+          "value": "FREQUENT"
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "answers": [
+        {
+          "name": "medicalOrTreatmentInformation",
+          "value": "INFREQUENT"
+        },
+        {
+          "name": "healthOrWellnessTopics",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "answers": [
+        {
+          "name": "matureOrSuggestiveThemes",
+          "value": "NONE"
+        },
+        {
+          "name": "sexualContentOrNudity",
+          "value": "NONE"
+        },
+        {
+          "name": "sexualContentGraphicAndNudity",
+          "value": "NONE"
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "answers": [
+        {
+          "name": "violenceCartoonOrFantasy",
+          "value": "NONE"
+        },
+        {
+          "name": "violenceRealistic",
+          "value": "NONE"
+        },
+        {
+          "name": "violenceRealisticProlongedGraphicOrSadistic",
+          "value": "NONE"
+        },
+        {
+          "name": "gunsOrOtherWeapons",
+          "value": "NONE"
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "answers": [
+        {
+          "name": "gamblingSimulated",
+          "value": "NONE"
+        },
+        {
+          "name": "contests",
+          "value": "NONE"
+        },
+        {
+          "name": "gambling",
+          "value": "false"
+        },
+        {
+          "name": "lootBox",
+          "value": "false"
+        }
+      ]
+    }
+  ],
+  "review_submitted": false,
+  "evidence": [
+    "Hitoiki/SettingsView.swift",
+    "Hitoiki/CheckInView.swift",
+    "Hitoiki/SessionStore.swift",
+    "Hitoiki/PhoneBridge.swift"
+  ]
+}

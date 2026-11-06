@@ -1,0 +1,15 @@
+{
+  "checked_on": "2026-11-05",
+  "app_id": "6830956191",
+  "reference_app_id": "6748590138",
+  "contact_fields": [
+    "contactFirstName",
+    "contactLastName",
+    "contactEmail",
+    "contactPhone"
+  ],
+  "values_copied_without_logging": true,
+  "verified_after_reload": true,
+  "other_metadata_preserved": true,
+  "review_submitted": false
+}

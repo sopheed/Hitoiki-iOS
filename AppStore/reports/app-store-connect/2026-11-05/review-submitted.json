@@ -1,0 +1,18 @@
+{
+  "checked_on": "2026-11-05",
+  "app": "Hitoiki",
+  "app_id": "6830956191",
+  "version": "1.0.0",
+  "build": "1",
+  "review_submitted": true,
+  "state": "WAITING_FOR_REVIEW",
+  "verified_after_reload": true,
+  "release_type": "AFTER_APPROVAL",
+  "price": 0,
+  "privacy_label": "データの収集なし",
+  "age_rating": "18+",
+  "regulated_medical_device": false,
+  "binary_uploaded_by_user": true,
+  "automatic_release_explicitly_authorized": true,
+  "last_verified_at": "2026-11-05T04:00:19.026Z"
+}

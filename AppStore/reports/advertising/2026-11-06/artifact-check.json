@@ -1,0 +1,26 @@
+{
+  "checked_on": "2026-11-06",
+  "app": "Hitoiki",
+  "release": {
+    "CFBundleIdentifier": "eijirou.Hitoiki",
+    "CFBundleShortVersionString": "1.0.1",
+    "CFBundleVersion": "2",
+    "GADApplicationIdentifier": "ca-app-pub-5120539001782748~7843047484",
+    "BannerAdUnitIdentifier": "ca-app-pub-5120539001782748/7874837074",
+    "ChildDirectedAdvertising": false
+  },
+  "debug": {
+    "GADApplicationIdentifier": "ca-app-pub-3940256099942544~1458002511",
+    "BannerAdUnitIdentifier": "ca-app-pub-3940256099942544/2934735716"
+  },
+  "watch": [
+    {
+      "bundle_id": "eijirou.Hitoiki.watchkitapp",
+      "version": "1.0.1",
+      "build": "2",
+      "bundled_frameworks": [],
+      "advertising_plist_absent": true
+    }
+  ],
+  "pass": true
+}
