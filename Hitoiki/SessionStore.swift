@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import UIKit
 
 @MainActor
 final class SessionStore: ObservableObject {
@@ -58,12 +59,47 @@ final class SessionStore: ObservableObject {
         }
     }
 
-    @discardableResult func start(hours: Int, reminder: Int, goal: Int?) -> Bool {
-        transact { try $0.start(at: Date(), hours: hours, reminder: reminder, goal: goal) }
+    @discardableResult func start(hours: Int?, reminder: Int, goal: Int?, occasion: DrinkingOccasion? = nil) -> Bool {
+        transact { try $0.start(at: Date(), hours: hours, reminder: reminder, goal: goal, occasion: occasion) }
     }
-    @discardableResult func add(kind: EntryKind, detail: String, photo: String? = nil, id: UUID = UUID()) -> Bool {
+    @discardableResult func add(kind: EntryKind, detail: String, photo: String? = nil, mood: String? = nil, note: String? = nil, id: UUID = UUID()) -> Bool {
         guard let s = active else { return false }
-        return transact { try $0.add(SessionEntry(id: id, date: max(Date(), s.startedAt), kind: kind, detail: detail, photoName: photo), to: s.id) }
+        let entry = SessionEntry(
+            id: id,
+            date: max(Date(), s.startedAt),
+            kind: kind,
+            detail: String(detail.prefix(200)),
+            photoName: photo,
+            mood: mood.map { String($0.prefix(40)) },
+            note: note.map { String($0.prefix(500)) }
+        )
+        return transact { try $0.add(entry, to: s.id) }
+    }
+
+    func savePhoto(_ image: UIImage) throws -> String {
+        let name = UUID().uuidString + ".jpg"
+        try FileManager.default.createDirectory(at: photoDirectory, withIntermediateDirectories: true)
+        let longestSide = max(image.size.width, image.size.height)
+        let scale = min(1, 1280 / max(1, longestSide))
+        let size = CGSize(width: max(1, image.size.width * scale), height: max(1, image.size.height * scale))
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        format.opaque = true
+        let clean = UIGraphicsImageRenderer(size: size, format: format).image { context in
+            UIColor.white.setFill()
+            context.fill(CGRect(origin: .zero, size: size))
+            image.draw(in: CGRect(origin: .zero, size: size))
+        }
+        guard let data = clean.jpegData(compressionQuality: 0.8), let url = photoURL(name) else {
+            throw DomainError.invalidData
+        }
+        try data.write(to: url, options: .atomic)
+        return name
+    }
+
+    func removePhoto(_ name: String) {
+        guard let url = photoURL(name) else { return }
+        try? FileManager.default.removeItem(at: url)
     }
     @discardableResult func end(note: String) -> Bool {
         guard let s = active else { return false }

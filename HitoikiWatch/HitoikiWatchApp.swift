@@ -23,12 +23,16 @@ struct WatchHomeView: View {
                         HStack {
                             VStack(alignment:.leading,spacing:4) {
                                 Text("ひといき").font(.headline)
-                                Text("ぽたが見守り中").font(.caption2).foregroundStyle(.secondary)
+                                Text("しゅりが見守り中").font(.caption2).foregroundStyle(.secondary)
                             }
-                            Spacer(); PotaView().frame(width:48,height:52).accessibilityHidden(true)
+                            Spacer(); ShuriView().frame(width:48,height:52).accessibilityHidden(true)
                         }
                         Text(session.startedAt,style:.timer).font(.system(size:32,weight:.medium,design:.rounded)).monospacedDigit().frame(maxWidth:.infinity,alignment:.leading)
-                        Label("\(session.plannedEnd.formatted(date:.omitted,time:.shortened)) おひらき予定",systemImage:"moon").font(.caption2).foregroundStyle(.secondary)
+                        if let plannedEnd = session.plannedEnd {
+                            Label("\(plannedEnd.formatted(date:.omitted,time:.shortened)) ごろがおひらき目安",systemImage:"moon").font(.caption2).foregroundStyle(.secondary)
+                        } else {
+                            Label("おひらき時間は未設定",systemImage:"moon").font(.caption2).foregroundStyle(.secondary)
+                        }
                         Button { store.record(.water); WKInterfaceDevice.current().play(.success) } label: {
                             VStack(spacing:5) {
                                 Label("お水を飲んだ",systemImage:"drop.fill").font(.headline)
@@ -38,9 +42,11 @@ struct WatchHomeView: View {
                         Button { store.record(.drink) } label: {
                             Label("お酒を記録  \(session.drinkCount + store.pendingCount(.drink))",systemImage:"wineglass").font(.subheadline)
                         }.disabled(store.ending || store.loadFailed)
-                        Button(store.ending ? "おひらきを同期待ち" : "今日はここまで") { confirmEnd = true }.font(.footnote).disabled(store.ending || store.loadFailed)
+                        Button { confirmEnd = true } label: {
+                            Label(store.ending ? "おひらきを同期待ち" : "おひらきにする",systemImage:"moon.stars.fill").font(.headline)
+                        }.buttonStyle(.borderedProminent).tint(Color(red:0.84,green:0.58,blue:0.39)).disabled(store.ending || store.loadFailed)
                     } else {
-                        PotaView().frame(width:110,height:110)
+                        ShuriView().frame(width:110,height:110)
                         Text("いっしょに、ゆっくりね。").font(.headline).multilineTextAlignment(.center)
                         Text("iPhoneで飲み会をはじめると、ここからお水やお酒を記録できます。")
                             .font(.footnote).foregroundStyle(.secondary).multilineTextAlignment(.center)
@@ -53,8 +59,8 @@ struct WatchHomeView: View {
                     Button("同期する") { store.refresh() }.font(.caption2)
                 }.padding(.horizontal,3)
             }.navigationTitle("").containerBackground(Color(red:0.07,green:0.16,blue:0.13).gradient,for:.navigation)
-            .confirmationDialog("飲み会を終了しますか？",isPresented:$confirmEnd,titleVisibility:.visible) {
-                Button("記録して、おひらき") { store.record(.end) }
+            .confirmationDialog("ここで、おひらきにしますか？",isPresented:$confirmEnd,titleVisibility:.visible) {
+                Button("いい区切りにする") { store.record(.end) }
                 Button("戻る",role:.cancel) {}
             }
         }

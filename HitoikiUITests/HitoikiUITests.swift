@@ -70,7 +70,7 @@ final class HitoikiUITests: XCTestCase {
         app.tabBars.buttons["せってい"].tap()
         XCTAssertTrue(app.switches["飲み会中の通知"].waitForExistence(timeout:5))
         tap(app.buttons["ひといきについて・使い方"],in:app)
-        XCTAssertTrue(app.staticTexts["ぽたの役目"].waitForExistence(timeout:5))
+        XCTAssertTrue(app.staticTexts["しゅりの役目"].waitForExistence(timeout:5))
     }
     func testAppStoreScreenshots() {
         let app = XCUIApplication()

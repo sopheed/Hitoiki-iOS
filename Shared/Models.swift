@@ -13,6 +13,48 @@ enum EntryKind: String, Codable, CaseIterable {
 enum DrinkKind: String, Codable, CaseIterable, Identifiable {
     case beer = "ビール", highball = "ハイボール", wine = "ワイン", sake = "日本酒", cocktail = "カクテル", other = "その他"
     var id: String { rawValue }
+    var symbol: String {
+        switch self {
+        case .beer: return "mug.fill"
+        case .highball: return "sparkles"
+        case .wine: return "wineglass.fill"
+        case .sake: return "cup.and.saucer.fill"
+        case .cocktail: return "takeoutbag.and.cup.and.straw.fill"
+        case .other: return "ellipsis.circle.fill"
+        }
+    }
+}
+
+enum DrinkMood: String, Codable, CaseIterable, Identifiable {
+    case fun = "楽しい", usual = "いつも通り", tired = "疲れぎみ", refresh = "気分転換したい"
+    var id: String { rawValue }
+}
+
+enum DrinkingOccasion: String, Codable, CaseIterable, Identifiable {
+    case yearEnd = "忘年会・新年会"
+    case solo = "ひとり飲み"
+    case friends = "友人と"
+    case work = "職場の集まり"
+    case date = "デート"
+    case twoPeople = "二人で"
+    case family = "家族・親しい人と"
+    case meal = "食事と一緒に"
+    case celebration = "お祝い"
+    case other = "その他"
+    var id: String { rawValue }
+    var symbol: String {
+        switch self {
+        case .yearEnd: return "party.popper.fill"
+        case .solo: return "person.fill"
+        case .friends: return "person.3.fill"
+        case .work: return "briefcase.fill"
+        case .date, .twoPeople: return "person.2.fill"
+        case .family: return "house.fill"
+        case .meal: return "fork.knife"
+        case .celebration: return "gift.fill"
+        case .other: return "ellipsis.circle.fill"
+        }
+    }
 }
 
 enum CheckInKind: String, Codable, CaseIterable, Identifiable {
@@ -29,14 +71,17 @@ struct SessionEntry: Identifiable, Codable, Equatable {
     var kind: EntryKind
     var detail: String
     var photoName: String? = nil
+    var mood: String? = nil
+    var note: String? = nil
 }
 
 struct DrinkingSession: Identifiable, Codable, Equatable {
     var id = UUID()
     var startedAt: Date
     var endedAt: Date? = nil
-    var plannedEnd: Date
+    var plannedEnd: Date?
     var reminderMinutes: Int
+    var occasion: DrinkingOccasion? = nil
     var drinkGoal: Int? = nil
     var entries: [SessionEntry] = []
     var note = ""
@@ -93,11 +138,17 @@ struct AppArchive: Codable, Equatable {
               [30, 60, 90].contains(preferences.reminderMinutes),
               (1...6).contains(preferences.durationHours),
               sessions.allSatisfy({ s in
-                  [30, 60, 90].contains(s.reminderMinutes) && s.plannedEnd > s.startedAt &&
+                  [30, 60, 90].contains(s.reminderMinutes) && (s.plannedEnd == nil || s.plannedEnd! > s.startedAt) &&
                   (s.endedAt == nil || s.endedAt! >= s.startedAt) &&
                   (s.drinkGoal == nil || (1...20).contains(s.drinkGoal!)) &&
                   Set(s.entries.map(\.id)).count == s.entries.count &&
-                  s.entries.allSatisfy { e in e.date >= s.startedAt && (e.photoName == nil || Self.isSafePhotoName(e.photoName!)) }
+              s.entries.allSatisfy { e in
+                  e.date >= s.startedAt &&
+                  e.detail.count <= 200 &&
+                  (e.note?.count ?? 0) <= 500 &&
+                  (e.mood?.count ?? 0) <= 40 &&
+                  (e.photoName == nil || Self.isSafePhotoName(e.photoName!))
+              }
               }) else { throw DomainError.invalidData }
     }
 
@@ -106,10 +157,10 @@ struct AppArchive: Codable, Equatable {
         return !name.contains("/") && !name.contains("\\")
     }
 
-    mutating func start(at now: Date, hours: Int, reminder: Int, goal: Int?) throws {
+    mutating func start(at now: Date, hours: Int?, reminder: Int, goal: Int?, occasion: DrinkingOccasion? = nil) throws {
         guard activeSession == nil else { throw DomainError.alreadyActive }
-        guard (1...6).contains(hours), [30,60,90].contains(reminder), goal == nil || (1...20).contains(goal!) else { throw DomainError.invalidData }
-        sessions.insert(DrinkingSession(startedAt: now, plannedEnd: now.addingTimeInterval(Double(hours) * 3600), reminderMinutes: reminder, drinkGoal: goal), at: 0)
+        guard (hours == nil || (1...6).contains(hours!)), [30,60,90].contains(reminder), goal == nil || (1...20).contains(goal!) else { throw DomainError.invalidData }
+        sessions.insert(DrinkingSession(startedAt: now, plannedEnd: hours.map { now.addingTimeInterval(Double($0) * 3600) }, reminderMinutes: reminder, occasion: occasion, drinkGoal: goal), at: 0)
     }
 
     mutating func add(_ entry: SessionEntry, to sessionID: UUID) throws {
@@ -202,7 +253,7 @@ struct ReminderPlan: Equatable {
     var finishDate: Date?
     static func make(archive: AppArchive, now: Date) -> ReminderPlan? {
         guard archive.preferences.remindersEnabled, let s = archive.activeSession else { return nil }
-        return ReminderPlan(sessionID: s.id, interval: Double(s.reminderMinutes * 60), nextDate: s.nextReminder(after: now), finishDate: s.plannedEnd > now ? s.plannedEnd : nil)
+        return ReminderPlan(sessionID: s.id, interval: Double(s.reminderMinutes * 60), nextDate: s.nextReminder(after: now), finishDate: s.plannedEnd.flatMap { $0 > now ? $0 : nil })
     }
 }
 
@@ -210,9 +261,12 @@ enum CSVExport {
     static func field(_ value: String) -> String { "\"" + value.replacingOccurrences(of: "\"", with: "\"\"") + "\"" }
     static func make(_ sessions: [DrinkingSession]) -> String {
         let formatter = ISO8601DateFormatter()
-        var rows = ["開始,終了,経過分,お酒の記録回数,お水の記録回数,チェック回数,メモ"]
+        var rows = ["開始,終了,シチュエーション,経過分,お酒の記録回数,お水の記録回数,チェック回数,飲んだもの・気分,メモ"]
         for s in sessions.filter({ !$0.isActive }) {
-            rows.append([formatter.string(from: s.startedAt), s.endedAt.map(formatter.string) ?? "", String(Int(s.elapsed() / 60)), String(s.drinkCount), String(s.waterCount), String(s.checkInCount), s.note].map(field).joined(separator: ","))
+          let drinkDetails = s.entries.filter { $0.kind == .drink }.map { entry in
+              [entry.detail, entry.mood, entry.note].compactMap { $0 }.filter { !$0.isEmpty }.joined(separator: "・")
+          }.joined(separator: " / ")
+          rows.append([formatter.string(from: s.startedAt), s.endedAt.map(formatter.string) ?? "", s.occasion?.rawValue ?? "", String(Int(s.elapsed() / 60)), String(s.drinkCount), String(s.waterCount), String(s.checkInCount), drinkDetails, s.note].map(field).joined(separator: ","))
         }
         return "\u{FEFF}" + rows.joined(separator: "\r\n")
     }

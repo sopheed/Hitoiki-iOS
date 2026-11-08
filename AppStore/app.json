@@ -3,16 +3,16 @@
   "directory": "Hitoiki-iOS",
   "product": "Hitoiki",
   "name": "ひといき - 飲み会の見守りタイマー",
-  "subtitle": "ぽたと飲み会のペースを見直す、やさしい時間管理",
-  "promotional_text": "楽しい時間に、ひといき。飲み会の経過時間とおひらき予定を確かめながら、お水・お酒・今の気持ちを記録。Apple Watchからも、手元でそっと振り返れます。",
+  "subtitle": "しゅりと飲み会のペースを見直す、やさしい時間管理",
+  "promotional_text": "忘年会も、ひとり飲みも。しゅりと一緒に、お水やお酒を記録して自分のペースを振り返ろう。おひらき時刻は決めても、決めなくても大丈夫。",
   "keywords": "飲みすぎ,飲酒,水分,タイマー,お酒,飲み会,習慣,リマインダー",
-  "description": "楽しい時間を、明日も気持ちよく。\nひといきは、飲み会で時間を忘れがちなあなたに、自分のペースを思い出すきっかけを届けるアプリです。しずくの仲間「ぽた」が、そっと寄り添います。\n\n■ はじめに、帰る時間を決めよう\n飲み会の開始時に、おひらきの目安と通知間隔を設定。経過時間、次の声かけ、終了予定をひとつの画面で確認できます。通知は30分・60分・90分から選べます。\n\n■ お水も、お酒も、さっと記録\nお水はワンタップ。お酒は種類を選んで記録できます。間違えたお水の記録は、直後の取り消しにも対応しています。\n\n■ ときどき、今に戻る小さなチェック\n簡単な計算、しずく探し、写真からひとつ選んで、少しだけ立ち止まる時間を。チェックのあとには、今の気持ちも残せます。\n\n■ Apple Watchでも、ひといき\n飲み会はiPhoneから開始。Watchでは経過時間と終了予定の確認、お水・お酒の記録、おひらきができます。通信できないときの操作は、接続が戻ったときに同期します。通知は端末の状態や設定に応じてiPhoneまたはWatchに届きます。\n\n■ 次の時間につながる記録帳\n過去の記録を日付やメモで検索。記録の詳細、写真、メモを見返したり、CSVで書き出したりできます。不要な記録は削除できます。\n\nアカウント登録、アプリ内課金はありません。通常画面の一部にバナー広告を表示します。記録と写真は端末内に保存し、Watchとの連携にはAppleの仕組みを使います。\n\nひといきは成人の飲酒習慣を振り返るためのアプリです。医療機器ではなく、酔いの程度・判断力・運転できるかを判定しません。チェックの正解やお水の記録は、酔いがさめたことを意味しません。お水でアルコールの分解が早まることもありません。飲酒後は運転しないでください。通知の到着や気づきを保証するものではありません。",
-  "whats_new": "・操作を妨げない位置にバナー広告を追加しました。\n・広告とプライバシーに関する案内と設定を追加しました。",
-  "review_notes": "No sign-in, demo account, purchases or developer-operated backend is required. Google AdMob banners appear on ordinary home/history screens; check-in, camera and session-entry sheets have no banners. Personalized ads, publisher first-party IDs and SDK coarse-location collection are disabled. UMP handles required regional consent, with a privacy-options entry in settings when required. The user interface is Japanese.\n\n1. On the first tab (いま), tap 飲み会をはじめる. Select a planned duration (1–6 hours) and reminder interval (30/60/90 minutes), then confirm. Allow local notifications to review reminders. All other functions remain available if permission is denied.\n2. In the active session, record water or a drink. Open ひといきチェック and choose arithmetic, the drop-finding puzzle, or a photo. A photo can be selected instead of using the camera. Camera access is requested only for taking a photo.\n3. End the session with 今日はここまで. Open きろく to review the timeline, search notes, edit/delete a record or export a CSV. Photos are local and excluded from CSV.\n4. Optional paired Apple Watch: start the session on iPhone first. On Watch, view elapsed time, log water/drinks or end the session. Pending commands sync when connectivity returns. Notifications use the system's iPhone/Watch delivery and mirroring settings.\n\nThis is a time-awareness and self-reflection tool for adults, not a medical/sobriety test. Puzzle results do not assess impairment or driving fitness. No claim of faster alcohol metabolism is made. No HealthKit data is used. Records/photos remain local; there is no developer-operated data collection.\nScreenshot records are fictional and were captured from actual SwiftUI screens using Debug-only isolated fixtures. These fixtures are excluded from Release builds.",
+  "description": "楽しい時間を、明日も気持ちよく。\nひといきは、飲み会で時間を忘れがちなあなたに、自分のペースを思い出すきっかけを届けるアプリです。しずくの相棒「しゅり」が、そっと寄り添います。\n\n■ 飲み会のスタイルは人それぞれ\n忘年会やひとり飲みなど、シチュエーションを選ぶこともできます。おひらきの時刻は任意の目安。時間を決めずに始めても大丈夫です。経過時間や次の声かけをひとつの画面で確認できます。通知間隔は30分・60分・90分から選べます。\n\n■ お水も、お酒も、さっと記録\nお水はワンタップ。お酒は飲むたびに種類を選んで記録。写真・気分・メモも任意で残せます。しゅりの表情は記録回数に合わせて変わります。\n\n■ ときどき、今に戻る小さなチェック\n簡単な計算、しずく探し、写真からひとつ選んで、少しだけ立ち止まる時間を。チェックのあとには、今の気持ちも残せます。\n\n■ Apple Watchでも、ひといき\n飲み会はiPhoneから開始。Watchでは経過時間と終了予定の確認、お水・お酒の記録、おひらきができます。通信できないときの操作は、接続が戻ったときに同期します。通知は端末の状態や設定に応じてiPhoneまたはWatchに届きます。\n\n■ 次の時間につながる記録帳\n過去の記録を日付やメモで検索。飲み物別の回数、写真、気分、メモを見返せます。日付・飲み物別の回数・お水の回数・過ごした時間をまとめた、しゅりの振り返りカードも保存・共有できます。写真・気分・メモは共有カードに含めません。CSVにも書き出せます。\n\nアカウント登録、アプリ内課金はありません。通常画面の一部にバナー広告を表示します。記録と写真は端末内に保存し、Watchとの連携にはAppleの仕組みを使います。\n\nひといきは成人の飲酒習慣を振り返るためのアプリです。医療機器ではなく、酔いの程度・判断力・運転できるかを判定しません。チェックの正解やお水の記録は、酔いがさめたことを意味しません。お水でアルコールの分解が早まることもありません。飲酒後は運転しないでください。通知の到着や気づきを保証するものではありません。",
+  "whats_new": "・飲み会のシチュエーションを選んで記録できるようになりました。\n・おひらき時刻を決めずに始められます。\n・しゅりと振り返るカードを保存・共有できます。",
+  "review_notes": "No sign-in, demo account, purchases or developer-operated backend is required. Google AdMob banners appear on ordinary home/history screens; check-in, camera and session-entry sheets have no banners. Personalized ads, publisher first-party IDs and SDK coarse-location collection are disabled. UMP handles required regional consent, with a privacy-options entry in settings when required. The user interface is Japanese.\n\n1. On the first tab (いま), tap 飲み会をはじめる. Optionally choose a drinking occasion and planned end time (1–6 hours), then select a reminder interval (30/60/90 minutes) and confirm. A planned end time is not required. Allow local notifications to review reminders. All other functions remain available if permission is denied.\n2. In the active session, record water or a drink. Open ひといきチェック and choose arithmetic, the drop-finding puzzle, or a photo. A photo can be selected instead of using the camera. Camera access is requested only for taking a photo.\n3. Tap おひらきにする, then confirm おひらきにして、記録する. Open きろく to review the timeline, search notes, edit/delete a record or export a CSV. Photos are local and excluded from CSV.\n4. Optional paired Apple Watch: start the session on iPhone first. On Watch, view elapsed time, log water/drinks or end the session. Pending commands sync when connectivity returns. Notifications use the system's iPhone/Watch delivery and mirroring settings.\n\nThis is a time-awareness and self-reflection tool for adults, not a medical/sobriety test. Puzzle results do not assess impairment or driving fitness. No claim of faster alcohol metabolism is made. No HealthKit data is used. Records/photos remain local; there is no developer-operated data collection.\nScreenshot records are fictional and were captured from actual SwiftUI screens using Debug-only isolated fixtures. These fixtures are excluded from Release builds.",
   "bundle": "eijirou.Hitoiki",
   "watch_bundle": "eijirou.Hitoiki.watchkitapp",
-  "version": "1.0.1",
-  "build": "2",
+  "version": "1.0.2",
+  "build": "4",
   "min_os": "iOS 17.0 / watchOS 10.0",
   "devices": "iPhone / Apple Watch",
   "categories": [
@@ -25,11 +25,11 @@
   "tagline": "楽しい時間に、ひといき。",
   "features": [
     [
-      "帰る時間を、忘れない。",
-      "経過時間とおひらき予定をひと目で。30・60・90分のローカル通知で、小さな休憩のきっかけを。"
+      "シチュエーションから、自分のペースで。",
+      "忘年会やひとり飲みなどを選べます。おひらき時刻は任意。30・60・90分の通知で、休憩のきっかけも。"
     ],
     [
-      "ぽたと、自分のペースで。",
+      "しゅりと、自分のペースで。",
       "お水やお酒を記録し、計算・しずく探し・写真で少しだけ立ち止まれます。"
     ],
     [
@@ -40,7 +40,7 @@
   "faq": [
     [
       "通知はいつ届きますか？",
-      "飲み会を開始すると、選んだ30・60・90分間隔とおひらき予定の通知を予約します。通知の許可、集中モード、電源や端末の状態によって届き方が変わります。アプリを開くと今後の予約を補充します。"
+      "飲み会を開始すると、選んだ30・60・90分間隔で通知します。おひらき時刻を設定した場合は、その時刻にも通知を予約します。通知の許可、集中モード、電源や端末の状態によって届き方が変わります。"
     ],
     [
       "Watchだけで飲み会を開始できますか？",
@@ -104,12 +104,12 @@
       "タイムラインとメモで、自分を知ろう。"
     ],
     "06-welcome": [
-      "ぽたと、あなたのペースで。",
+      "しゅりと、あなたのペースで。",
       "お水と時間を思い出す、飲み会の相棒。"
     ],
     "07-plan": [
-      "はじめに、帰る時間を決めよう。",
-      "通知の間隔も、自分に合わせて。"
+      "シチュエーションから決めよう。",
+      "時間は決めても、決めなくても。"
     ]
   },
   "store_defaults": {

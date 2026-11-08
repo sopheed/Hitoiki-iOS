@@ -9,9 +9,9 @@ struct SettingsView: View {
         Form {
             Section {
                 HStack(spacing:16) {
-                    PotaView().frame(width:75,height:80).accessibilityHidden(true)
+                    ShuriView().frame(width:75,height:80).accessibilityHidden(true)
                     VStack(alignment:.leading,spacing:6) {
-                        Text("ぽたと、あなたのペースで。").font(.headline)
+                        Text("しゅりと、あなたのペースで。").font(.headline)
                         Text("見守り方を整えよう。") .font(.subheadline).foregroundStyle(Palette.secondary)
                     }
                 }.listRowBackground(Color.clear)
@@ -34,11 +34,11 @@ struct SettingsView: View {
                 Text("通知間隔は次の飲み会から適用します。集中モードや消音など、端末の設定によって通知に気づけない場合があります。")
             }
             Section {
-                Stepper("次回は\(store.archive.preferences.durationHours)時間くらい",value:preference(\.durationHours),in:1...6)
+                Stepper("おひらき目安の初期値：\(store.archive.preferences.durationHours)時間",value:preference(\.durationHours),in:1...6)
                 Toggle("戻ってきたら、ひといきチェック",isOn:preference(\.returnCheckIn))
                 Toggle("記録したら触覚でお知らせ",isOn:preference(\.haptics))
             } header: { Text("自分に合ったペース") } footer: {
-                Text("チェックから15分以上経った起動時、またはアプリを30秒以上閉じてから戻ったときに表示します。")
+                Text("おひらきの目安は飲み会開始時に任意で設定できます。チェックから15分以上経った起動時、またはアプリを30秒以上閉じてから戻ったときに表示します。")
             }
             Section {
                 Label(bridge.watchAvailable ? "Apple Watchと連携しています" : "Apple Watchでも、ひといき。",systemImage:"applewatch")
@@ -51,7 +51,7 @@ struct SettingsView: View {
                 NavigationLink("ひといきについて・使い方") { AboutView() }
                 Text("アカウント不要 / 記録と写真は端末に保存")
                     .font(.caption).foregroundStyle(Palette.secondary)
-            } footer: { Text("ひといき 1.0 • MADE WITH A LITTLE CARE") }
+            } footer: { Text("ひといき \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "1.0") • MADE WITH A LITTLE CARE") }
             AdvertisingPrivacySection()
         }.navigationTitle("せってい").scrollContentBackground(.hidden).background(Palette.canvas)
             .task { await reminders.refreshPermission() }
@@ -69,14 +69,15 @@ struct AboutView: View {
     var body: some View {
         ScrollView {
             VStack(alignment:.leading,spacing:24) {
-                PotaView().frame(width:140,height:140).frame(maxWidth:.infinity)
-                SectionCaption(overline:"HELLO, I'M POTA",title:"ひといきは、自分に戻る時間。")
-                paragraph("ぽたの役目", "楽しい飲み会で、時間と帰る予定を思い出すお手伝いをします。お水を飲んだり、少し休んだり。飲むことを責めずに、自分のペースを大切にするためのアプリです。")
+                ShuriView().frame(width:140,height:140).frame(maxWidth:.infinity)
+                SectionCaption(overline:"HELLO, I'M SHURI",title:"ひといきは、自分に戻る時間。")
+                paragraph("しゅりについて", "首里の響きと、お酒の「しゅ」を重ねた名前です。楽しい時間にひといきを届ける、しずくの相棒です。時間や帰る予定を思い出すお手伝いをします。")
+                paragraph("しゅりの役目", "飲んだ回数に合わせて表情が変わりますが、酔いの程度を測るものではありません。お水を飲んだり、少し休んだり。飲むことを責めずに、自分のペースを大切にするためのアプリです。")
                 paragraph("チェックについて", "計算・しずく探し・写真は、意識を今に戻すきっかけです。正解しても、酔いがさめたことや判断力が正常なことを意味しません。お水もアルコールの分解を早めません。飲酒後は運転しないでください。")
                 paragraph("つらいときは", "無理に飲み続けず、休んで近くの人に声をかけてください。呼びかけに反応しない、呼吸がおかしいときは119へ。飲酒のコントロールに困ることが続く場合は、医療機関や地域の相談窓口へ相談してください。")
                 paragraph("データと写真", "記録と写真は端末内に保存します。Watchとの連携にはAppleのWatchConnectivityを使用します。飲酒・チェックの記録や写真を広告サービスへ渡すことはありません。端末のバックアップ設定によってはOSのバックアップに含まれます。アプリを削除すると記録も削除されます。必要な記録はCSVで書き出せます（写真は含みません）。")
                 paragraph("広告について", "通常の画面の一部にGoogle AdMobのバナーを表示します。チェック、撮影、入力中には表示しません。パーソナライズ広告と広告のための位置情報収集を無効にしています。広告の配信・不正防止・計測には、IPアドレス、端末・広告の識別情報、操作・診断情報などがGoogleに送信される場合があります。設定の「広告とプライバシー」から方針を確認できます。")
-                paragraph("通知について", "飲み会中は最大60回分と終了予定の通知を予約します。アプリを開くと予約を補充します。終了すると残りの通知を取り消します。通知は端末の設定や電源状態などに左右されます。")
+                paragraph("通知について", "飲み会中は最大60回分の声かけを予約します。おひらき時刻を設定した場合は、その時刻の通知も予約します。アプリを開くと予約を補充し、終了すると残りの通知を取り消します。通知は端末の設定や電源状態などに左右されます。")
                 Text("今日のあなたにも、明日のあなたにも。")
                     .font(.subheadline.bold()).foregroundStyle(Palette.forest).frame(maxWidth:.infinity).padding(.vertical,12)
             }.padding(24)

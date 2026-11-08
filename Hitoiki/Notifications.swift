@@ -56,7 +56,7 @@ final class ReminderCenter: NSObject, ObservableObject, UNUserNotificationCenter
                     guard generation == expected else { return }
                     let date = plan.nextDate.addingTimeInterval(Double(offset) * plan.interval)
                     let content = UNMutableNotificationContent()
-                    content.title = "ぽたと、ひといき。"
+                    content.title = "しゅりと、ひといき。"
                     content.body = offset % 2 == 0 ? "お水をひとくち。今の時間と、帰る予定を思い出そう。" : "楽しい時間にも、ちいさな休憩を。今の気持ちを確かめよう。"
                     content.sound = .default
                     content.categoryIdentifier = "HITOIKI"

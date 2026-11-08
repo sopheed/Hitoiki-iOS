@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0405E7B2B81FF2B28C705328 /* HitoikiWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = F1D7C74C2A25B46B492BF1E7 /* HitoikiWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6EDFC52E5DF7D5B7A03FC50D /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 3689DC32160E0CC38D5A4EC6 /* GoogleUserMessagingPlatform */; };
+		D3D46B75EBA8665BB0824B18 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = A67C561DA24DF1C5BB967CFE /* GoogleMobileAds */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 		27E4270ADEBA3EB573B9AE2B /* Hitoiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hitoiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B814C5B8138143DD022969B /* HitoikiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitoikiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		505D3C723638FD98E561D4D5 /* HitoikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HitoikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		798D0114687791E01C70A5A3 /* Configuration/Advertising.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration/Advertising.xcconfig; sourceTree = "<group>"; };
 		F1D7C74C2A25B46B492BF1E7 /* HitoikiWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HitoikiWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,8 +78,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D46B75EBA8665BB0824B18,
-				6EDFC52E5DF7D5B7A03FC50D,
+				D3D46B75EBA8665BB0824B18 /* GoogleMobileAds in Frameworks */,
+				6EDFC52E5DF7D5B7A03FC50D /* GoogleUserMessagingPlatform in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +109,7 @@
 				0F0EC177072B0DB807B260DA /* HitoikiTests */,
 				432DCB6BF8ADB9312741C1E6 /* HitoikiUITests */,
 				FE0A091FDBFB3E9C31B7A1BD /* Products */,
-				798D0114687791E01C70A5A3,
+				798D0114687791E01C70A5A3 /* Configuration/Advertising.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -164,13 +167,13 @@
 				DCF2B3AFA081C174C9D7D256 /* Shared */,
 			);
 			name = Hitoiki;
+			packageProductDependencies = (
+				A67C561DA24DF1C5BB967CFE /* GoogleMobileAds */,
+				3689DC32160E0CC38D5A4EC6 /* GoogleUserMessagingPlatform */,
+			);
 			productName = Hitoiki;
 			productReference = 27E4270ADEBA3EB573B9AE2B /* Hitoiki.app */;
 			productType = "com.apple.product-type.application";
-			packageProductDependencies = (
-				A67C561DA24DF1C5BB967CFE,
-				3689DC32160E0CC38D5A4EC6,
-			);
 		};
 		64CDF64E1C9DEDD7CE51E283 /* HitoikiWatch */ = {
 			isa = PBXNativeTarget;
@@ -249,6 +252,10 @@
 				Base,
 			);
 			mainGroup = 62BCE9422FF2D14F69AB80A1;
+			packageReferences = (
+				7FE93FEDD0A2D8D0A92EB78F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				236116081D902DAFA7DE9296 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */,
+			);
 			productRefGroup = FE0A091FDBFB3E9C31B7A1BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,10 +264,6 @@
 				64CDF64E1C9DEDD7CE51E283 /* HitoikiWatch */,
 				18315AA8A594B2FD89109A86 /* HitoikiTests */,
 				665B40A1EC3DB50440FE9F3F /* HitoikiUITests */,
-			);
-			packageReferences = (
-				7FE93FEDD0A2D8D0A92EB78F,
-				236116081D902DAFA7DE9296,
 			);
 		};
 /* End PBXProject section */
@@ -393,7 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TQQM6G5CS8;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -404,7 +407,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = eijirou.Hitoiki.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -419,10 +422,11 @@
 		};
 		5CC532096C56FF658E21759A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798D0114687791E01C70A5A3 /* Configuration/Advertising.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = TQQM6G5CS8;
 				ENABLE_PREVIEWS = YES;
@@ -440,7 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = eijirou.Hitoiki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -451,14 +455,13 @@
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
-			baseConfigurationReference = 798D0114687791E01C70A5A3 /* Advertising.xcconfig */;
 		};
 		5CC58B06344FD390F7738AE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = TQQM6G5CS8;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -469,7 +472,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = eijirou.Hitoiki.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -580,10 +583,11 @@
 		};
 		F306B412A5825A23AD8D6FC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 798D0114687791E01C70A5A3 /* Configuration/Advertising.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 4;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = TQQM6G5CS8;
 				ENABLE_PREVIEWS = YES;
@@ -601,7 +605,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = eijirou.Hitoiki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -611,7 +615,6 @@
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
-			baseConfigurationReference = 798D0114687791E01C70A5A3 /* Advertising.xcconfig */;
 		};
 /* End XCBuildConfiguration section */
 
@@ -663,14 +666,37 @@
 		};
 /* End XCConfigurationList section */
 
-/* Advertising packages and configuration */
-		7FE93FEDD0A2D8D0A92EB78F /* GoogleMobileAds package */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git"; requirement = {kind = exactVersion; version = 13.12.0; }; };
-		A67C561DA24DF1C5BB967CFE /* GoogleMobileAds */ = {isa = XCSwiftPackageProductDependency; package = 7FE93FEDD0A2D8D0A92EB78F; productName = GoogleMobileAds; };
-		D3D46B75EBA8665BB0824B18 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = A67C561DA24DF1C5BB967CFE; };
-		236116081D902DAFA7DE9296 /* GoogleUserMessagingPlatform package */ = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git"; requirement = {kind = exactVersion; version = 3.1.0; }; };
-		3689DC32160E0CC38D5A4EC6 /* GoogleUserMessagingPlatform */ = {isa = XCSwiftPackageProductDependency; package = 236116081D902DAFA7DE9296; productName = GoogleUserMessagingPlatform; };
-		6EDFC52E5DF7D5B7A03FC50D /* GoogleUserMessagingPlatform in Frameworks */ = {isa = PBXBuildFile; productRef = 3689DC32160E0CC38D5A4EC6; };
-		798D0114687791E01C70A5A3 /* Advertising.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Configuration/Advertising.xcconfig; sourceTree = "<group>"; };
+/* Begin XCRemoteSwiftPackageReference section */
+		236116081D902DAFA7DE9296 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-user-messaging-platform.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.1.0;
+			};
+		};
+		7FE93FEDD0A2D8D0A92EB78F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = exactVersion;
+				version = 13.12.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3689DC32160E0CC38D5A4EC6 /* GoogleUserMessagingPlatform */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 236116081D902DAFA7DE9296 /* XCRemoteSwiftPackageReference "swift-package-manager-google-user-messaging-platform" */;
+			productName = GoogleUserMessagingPlatform;
+		};
+		A67C561DA24DF1C5BB967CFE /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7FE93FEDD0A2D8D0A92EB78F /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F6F4DA8D93E88A08220E03B7 /* Project object */;
 }

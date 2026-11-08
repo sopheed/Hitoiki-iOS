@@ -23,7 +23,7 @@ struct RootView: View {
         Group {
             if store.loadFailed {
                 VStack(spacing:24) {
-                    PotaView(resting:true).frame(width:150,height:150)
+                    ShuriView(resting:true).frame(width:150,height:150)
                     Text("記録を大切に保管しています").font(.title2.bold())
                     Text("データを読み込めませんでした。元のファイルは残しています。空き容量を確認して再試行してください。").multilineTextAlignment(.center)
                     Button("もう一度読み込む") { store.reload() }.buttonStyle(FilledButton())
@@ -51,7 +51,7 @@ struct RootView: View {
             NavigationStack {
                 switch selection {
                 case .start: StartView()
-                case .drink: DrinkView { showToast("お酒を記録しました") }
+                case .drink: DrinkView { id in showToast("しゅりに伝えたよ", undo: id) }
                 case .checkIn: CheckInView { showToast("ひといき、できたね。") }
                 case .finish: FinishView { tab = 1; showToast("今日の記録を残しました") }
                 }
@@ -114,7 +114,7 @@ struct HomeView: View {
                         Text("ひといき").font(.system(.title2,design:.rounded,weight:.bold))
                     }
                     Spacer()
-                    Label(store.active == nil ? "あなたのペースで" : "ぽたが見守り中",systemImage:store.active == nil ? "leaf" : "circle.inset.filled")
+                    Label(store.active == nil ? "あなたのペースで" : "しゅりが見守り中",systemImage:store.active == nil ? "leaf" : "circle.inset.filled")
                         .font(.caption.weight(.semibold)).padding(.horizontal,12).padding(.vertical,9).background(Palette.mint,in:Capsule())
                 }.padding(.top,8)
                 if let session = store.active { active(session) } else { idle }
@@ -130,7 +130,7 @@ struct HomeView: View {
         Group {
             VStack(alignment:.leading,spacing:8) {
                 Text("楽しい夜に、\nひといきの余白を。").font(.system(size:34,weight:.bold,design:.rounded)).lineSpacing(4).fixedSize(horizontal:false,vertical:true)
-                Text("お水と、時間と、いまの気持ち。\nしずくの「ぽた」がそっと見守ります。")
+                Text("お水と、時間と、いまの気持ち。\nしずくの相棒「しゅり」と一緒に。")
                     .font(.subheadline).foregroundStyle(Palette.secondary).lineSpacing(5)
             }
             ZStack {
@@ -138,10 +138,10 @@ struct HomeView: View {
                 Circle().fill(Palette.card.opacity(0.45)).frame(width:190,height:190).offset(x:35,y:5)
                 Image(systemName:"sparkle").font(.title2).foregroundStyle(Palette.forest.opacity(0.45)).offset(x:-105,y:-68)
                 Image(systemName:"leaf").font(.title2).rotationEffect(.degrees(-25)).foregroundStyle(Palette.forest.opacity(0.45)).offset(x:112,y:64)
-                PotaView().frame(width:205,height:205).offset(y:8)
+                ShuriView().frame(width:205,height:205).offset(y:8)
                 Text("いっしょに、ゆっくりね。")
                     .font(.caption.weight(.semibold)).padding(.horizontal,14).padding(.vertical,9).background(Palette.card,in:Capsule()).offset(x:65,y:-80)
-            }.frame(height:250).accessibilityElement(children:.ignore).accessibilityLabel("しずくのぽた。いっしょに、ゆっくりね。")
+            }.frame(height:250).accessibilityElement(children:.ignore).accessibilityLabel("しずくのしゅり。いっしょに、ゆっくりね。")
             Button { sheet = .start } label: { Label("飲み会をはじめる",systemImage:"play.fill") }.buttonStyle(FilledButton()).accessibilityIdentifier("startSession")
             HStack(alignment:.top,spacing:14) {
                 Image(systemName:"bell.badge").font(.title3).padding(13).background(Palette.peach,in:RoundedRectangle(cornerRadius:16))
@@ -167,40 +167,65 @@ struct HomeView: View {
     }
     private func active(_ session: DrinkingSession) -> some View {
         Group {
+            ShuriCompanionStage(session:session)
+            Button { sheet = .finish } label: {
+                HStack(spacing:14) {
+                    Image(systemName:"moon.stars.fill").font(.title2).frame(width:48,height:48)
+                        .background(.white.opacity(0.16),in:RoundedRectangle(cornerRadius:15))
+                    VStack(alignment:.leading,spacing:3) {
+                        Text("おひらきにする").font(.headline)
+                        Text("ここで区切るのも、いい選択").font(.caption).foregroundStyle(.white.opacity(0.82))
+                    }
+                    Spacer()
+                    Image(systemName:"arrow.right").font(.subheadline.bold())
+                }.foregroundStyle(.white).padding(16).frame(maxWidth:.infinity,alignment:.leading)
+                    .background(Color(red:0.17,green:0.39,blue:0.32),in:RoundedRectangle(cornerRadius:24))
+            }.buttonStyle(.plain).accessibilityIdentifier("finishSession")
             TimelineView(.periodic(from:.now,by:1)) { timeline in
                 VStack(alignment:.leading,spacing:18) {
-                    HStack(alignment:.top) {
-                        VStack(alignment:.leading,spacing:7) {
-                            Text("楽しい時間にも、\nひと呼吸。").font(.system(.title,design:.rounded,weight:.bold))
-                            Text("\(session.startedAt.formatted(date:.omitted,time:.shortened)) から見守っています")
-                                .font(.caption).foregroundStyle(Palette.secondary)
-                        }
-                        Spacer(minLength:4)
-                        PotaView().frame(width:95,height:105).accessibilityHidden(true)
-                    }
                     VStack(alignment:.leading,spacing:8) {
                         Text("はじめてから").font(.caption.weight(.semibold)).foregroundStyle(Palette.secondary)
                         Text(TimeText.clock(session.elapsed(at:timeline.date)))
                             .font(.system(size:48,weight:.semibold,design:.rounded)).monospacedDigit().minimumScaleFactor(0.6).lineLimit(1).accessibilityIdentifier("elapsedTime")
-                        HStack(spacing:8) {
-                            Image(systemName:"moon")
-                            Text(timeline.date >= session.plannedEnd ? "そろそろ帰る予定の時間だよ" : "\(session.plannedEnd.formatted(date:.omitted,time:.shortened)) におひらき予定")
-                        }.font(.subheadline.weight(.medium)).foregroundStyle(timeline.date >= session.plannedEnd ? Palette.orange : Palette.forest)
+                        if let plannedEnd = session.plannedEnd {
+                            HStack(spacing:8) {
+                                Image(systemName:"moon")
+                                Text(timeline.date >= plannedEnd ? "おひらきの目安の時間だよ" : "\(plannedEnd.formatted(date:.omitted,time:.shortened)) ごろがおひらき目安")
+                            }.font(.subheadline.weight(.medium)).foregroundStyle(timeline.date >= plannedEnd ? Palette.orange : Palette.forest)
+                        } else {
+                            Label("おひらき時間は未設定。いつでも区切れます。",systemImage:"moon")
+                                .font(.subheadline.weight(.medium)).foregroundStyle(Palette.forest)
+                        }
                     }.padding(22).frame(maxWidth:.infinity,alignment:.leading).background(Palette.mint,in:RoundedRectangle(cornerRadius:28))
                     if store.archive.preferences.remindersEnabled && reminders.permission == .authorized {
                         Label("次の声かけ \(session.nextReminder(after:timeline.date).formatted(date:.omitted,time:.shortened))",systemImage:"bell").font(.caption).foregroundStyle(Palette.secondary)
                     }
                 }
             }
+            Text("記録した回数は目安のメモです。量や度数、酔い具合を判定するものではありません。")
+                .font(.caption).foregroundStyle(Palette.secondary).lineSpacing(3)
             if reminders.permission == .denied || !store.archive.preferences.remindersEnabled {
                 Label("通知はお休み中です。ときどきアプリで時間を確かめてね。",systemImage:"bell.slash").font(.footnote).foregroundStyle(Palette.orange)
             }
-            HStack(spacing:12) {
-                quickAction(title:"お水を飲んだ",count:session.waterCount,symbol:"drop.fill",color:Palette.mint,action:onWater).accessibilityIdentifier("addWater")
-                quickAction(title:"お酒を記録",count:session.drinkCount,symbol:"wineglass.fill",color:Palette.peach) { sheet = .drink }.accessibilityIdentifier("addDrink")
-            }
+            Button { sheet = .drink } label: {
+                HStack(spacing:16) {
+                    Image(systemName:"wineglass.fill").font(.title2).frame(width:48,height:48).background(.white.opacity(0.45),in:RoundedRectangle(cornerRadius:16))
+                    VStack(alignment:.leading,spacing:4) {
+                        Text("飲んだら、1杯分を記録").font(.headline)
+                        Text("飲みものの種類を選びます · \(session.drinkCount)回記録").font(.caption).foregroundStyle(Palette.secondary)
+                    }
+                    Spacer(minLength:0)
+                    Image(systemName:"plus.circle.fill").font(.title2)
+                }.padding(18).frame(maxWidth:.infinity,alignment:.leading).background(Palette.peach,in:RoundedRectangle(cornerRadius:26))
+            }.buttonStyle(.plain).accessibilityIdentifier("addDrink")
+            Button(action:onWater) {
+                Label("お水を飲んだ",systemImage:"drop.fill")
+                    .font(.subheadline.weight(.semibold)).frame(maxWidth:.infinity).padding(.vertical,15)
+                    .background(Palette.mint,in:RoundedRectangle(cornerRadius:20))
+                    .overlay(alignment:.trailing) { Text("\(session.waterCount)回").font(.caption).foregroundStyle(Palette.secondary).padding(.trailing,18) }
+            }.buttonStyle(.plain).accessibilityIdentifier("addWater")
             if let goal = session.drinkGoal, session.drinkCount >= goal {
-                Label("自分で決めた\(goal)杯になりました。次はお水にしようか。",systemImage:"leaf.fill").font(.subheadline).foregroundStyle(Palette.orange)
+                Label("自分で決めた\(goal)回の目安に達しました。ひとやすみしよう。",systemImage:"leaf.fill").font(.subheadline).foregroundStyle(Palette.orange)
             }
             SoftCard {
                 VStack(alignment:.leading,spacing:15) {
@@ -213,18 +238,49 @@ struct HomeView: View {
                     }
                 }
             }
-            Button { sheet = .finish } label: {
-                Label("今日はここまで・飲み会を終了",systemImage:"moon.zzz").font(.subheadline.bold()).frame(maxWidth:.infinity).padding(.vertical,16)
-            }.accessibilityIdentifier("finishSession")
         }
     }
-    private func quickAction(title: String,count: Int,symbol: String,color: Color,action: @escaping ()->Void) -> some View {
-        Button(action:action) {
-            VStack(alignment:.leading,spacing:12) {
-                HStack { Image(systemName:symbol).font(.title2); Spacer(); Image(systemName:"plus.circle.fill").font(.title3) }
-                Text(title).font(.subheadline.bold())
-                Text("\(count) 回の記録").font(.caption).foregroundStyle(Palette.secondary).accessibilityIdentifier(symbol == "drop.fill" ? "waterCount" : "drinkCount")
-            }.padding(18).frame(maxWidth:.infinity,alignment:.leading).background(color,in:RoundedRectangle(cornerRadius:25))
-        }.buttonStyle(.plain)
+}
+
+private struct ShuriCompanionStage: View {
+    var session: DrinkingSession
+    private var latestDrink: SessionEntry? { session.entries.last { $0.kind == .drink } }
+    private var headline: String {
+        switch session.drinkCount {
+        case 0: return "こんばんは、しゅりだよ。"
+        case 1: return "記録ありがとう。"
+        case 2: return "しゅりと、ひとやすみ。"
+        default: return "今日はここで、ひといき。"
+        }
+    }
+    private var message: String {
+            guard let latestDrink else {
+            if let occasion = session.occasion { return "\(occasion.rawValue)なんだね。帰りたい時間を大切に、あなたのペースで過ごそう。" }
+            return "帰りたい時間を大切に、あなたのペースで過ごそう。"
+        }
+        if session.drinkCount >= 3 { return "\(latestDrink.detail)を記録したね。これ以上は飲まずに休もう。近くの人にも声をかけてね。" }
+        if session.drinkCount == 2 { return "\(latestDrink.detail)を記録したね。次はお水を飲んで、少し座ろう。" }
+        return "\(latestDrink.detail)を記録したね。次の一杯の前に、お水や休憩もどう？"
+    }
+    var body: some View {
+        VStack(spacing:8) {
+            HStack {
+                Label(session.occasion?.rawValue ?? "今日のひといき",systemImage:session.occasion?.symbol ?? "sparkle")
+                    .font(.caption2.weight(.heavy)).lineLimit(1)
+                Spacer()
+                Text("\(session.drinkCount)回記録").font(.caption.weight(.semibold))
+            }.foregroundStyle(Palette.forest)
+            ShuriView(drinkCount:session.drinkCount).frame(width:170,height:170).accessibilityHidden(true)
+                .padding(.vertical,2)
+            Text(headline).font(.system(.title3,design:.rounded,weight:.bold)).multilineTextAlignment(.center)
+            Text(message).font(.subheadline).foregroundStyle(Palette.secondary).multilineTextAlignment(.center).lineSpacing(4)
+                .frame(maxWidth:.infinity).padding(.horizontal,17).padding(.vertical,13)
+                .background(Palette.card,in:RoundedRectangle(cornerRadius:18))
+            Text("しゅりの表情は記録回数に合わせた演出です。酔い具合の判定ではありません。")
+                .font(.caption2).foregroundStyle(Palette.secondary).multilineTextAlignment(.center)
+        }
+        .padding(18).frame(maxWidth:.infinity)
+        .background(Palette.mint,in:RoundedRectangle(cornerRadius:30))
+        .accessibilityElement(children:.combine)
     }
 }

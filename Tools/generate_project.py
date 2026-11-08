@@ -51,7 +51,7 @@ for name in target_names:
         'LD_RUNPATH_SEARCH_PATHS':'$(inherited) @executable_path/Frameworks',
     }
     if not test:
-        settings.update({'CURRENT_PROJECT_VERSION':'2','MARKETING_VERSION':'1.0.1'})
+        settings.update({'CURRENT_PROJECT_VERSION':'4','MARKETING_VERSION':'1.0.2'})
         settings.update({'ASSETCATALOG_COMPILER_APPICON_NAME':'AppIcon','INFOPLIST_FILE':'Configuration/'+name+'-Info.plist','INFOPLIST_KEY_CFBundleDisplayName':'ひといき'})
     if name=='Hitoiki':
         settings.update({'INFOPLIST_KEY_UILaunchScreen_Generation':'YES','INFOPLIST_KEY_UIApplicationSceneManifest_Generation':'YES','INFOPLIST_KEY_UISupportedInterfaceOrientations':'UIInterfaceOrientationPortrait','ENABLE_PREVIEWS':'YES'})

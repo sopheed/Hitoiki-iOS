@@ -26,7 +26,7 @@ struct CheckInView: View {
         ScrollView {
             VStack(alignment:.leading,spacing:24) {
                 HStack(spacing:16) {
-                    PotaView().frame(width:85,height:90).accessibilityHidden(true)
+                    ShuriView().frame(width:85,height:90).accessibilityHidden(true)
                     VStack(alignment:.leading,spacing:8) {
                         Text("いま、どんな気分？").font(.system(.title2,design:.rounded,weight:.bold))
                         Text("肩の力をぬいて、ひと呼吸。\n好きなチェックをひとつどうぞ。")
@@ -163,21 +163,9 @@ struct CheckInView: View {
         defer { saving = false }
         var name: String?
         do {
-            if let image, kind == .photo {
-                name = UUID().uuidString + ".jpg"
-                try FileManager.default.createDirectory(at:store.photoDirectory,withIntermediateDirectories:true)
-                let longest = max(image.size.width,image.size.height)
-                let scale = min(1,1280/max(1,longest))
-                let size = CGSize(width:max(1,image.size.width*scale),height:max(1,image.size.height*scale))
-                let format = UIGraphicsImageRendererFormat(); format.scale = 1; format.opaque = true
-                let clean = UIGraphicsImageRenderer(size:size,format:format).image { context in
-                    UIColor.white.setFill(); context.fill(CGRect(origin:.zero,size:size)); image.draw(in:CGRect(origin:.zero,size:size))
-                }
-                guard let data = clean.jpegData(compressionQuality:0.8), let url = store.photoURL(name!) else { throw DomainError.invalidData }
-                try data.write(to:url,options:.atomic)
-            }
-            if store.add(kind:.checkIn,detail:"\(kind.rawValue)・\(mood)",photo:name) { completed(); dismiss() }
-            else if let name, let url = store.photoURL(name) { try? FileManager.default.removeItem(at:url) }
+            if let image, kind == .photo { name = try store.savePhoto(image) }
+            if store.add(kind:.checkIn,detail:kind.rawValue,photo:name,mood:mood) { completed(); dismiss() }
+            else if let name { store.removePhoto(name) }
         } catch { store.errorMessage = "写真を保存できませんでした。\(error.localizedDescription)" }
     }
 }
