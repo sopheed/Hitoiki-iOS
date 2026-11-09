@@ -113,16 +113,21 @@
     ]
   },
   "store_defaults": {
-    "copyright": "2026 Shunji Kyan"
+    "copyright": "2026 Eijirou"
   },
   "release_prepared_on": "2026-11-06",
   "app_store_connect": {
     "app_id": "6830956191",
-    "target_version": "1.0",
+    "target_version": "1.0.1",
     "locale": "ja",
     "created_date": "2026-11-05",
     "sku": "eijirou.Hitoiki.iOS",
-    "previous_app_id": "6830940134"
+    "previous_app_id": "6830940134",
+    "saved_date": "2026-11-06",
+    "selected_build": "1",
+    "release_type": "AFTER_APPROVAL",
+    "review_state": "WAITING_FOR_REVIEW",
+    "submitted_at": "2026-11-06T11:55:04.095Z"
   },
   "advertising": {
     "provider": "Google AdMob",

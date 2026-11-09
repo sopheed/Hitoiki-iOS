@@ -1,0 +1,36 @@
+# macOS and local Xcode state
+.DS_Store
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+
+# Generated build products
+.build/
+.swiftpm/
+DerivedData/
+build/
+*.xcarchive/
+*.xcresult/
+*.dSYM/
+*.ipa
+*.log
+
+# Local signing credentials and provisioning
+*.p12
+*.p8
+*.key
+*.pem
+*.cer
+*.mobileprovision
+.env
+.env.*
+!.env.example
+
+# Distribution packages and store-operation snapshots
+AppStore/dist/
+AppStore/reports/
+AppStore/releases/*/resume-reports/
+AppStore/releases/*/Signing.xcconfig
+AppStore/releases/*/ExportOptions.plist
+AppStore/releases/*/UploadOptions.plist
+AppStore/**/capture-*.json
